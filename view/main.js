@@ -103,7 +103,7 @@ var newWorker = function(relativePath) {
 	}
 };
 
-// initialize after html and scripts are loaded ========================================
+// initialize after html and scripts are loaded =	=======================================
 $(document).ready(function() {
 	//common start condition design
 	$(".preloader").hide();
@@ -111,7 +111,7 @@ $(document).ready(function() {
 	$(".page").css({ opacity: "1" });
 
 	//language setting. function defined in createpage.js
-	languageset();
+	//languageset();
 
 	//no web-worker
 	useWorker = false;

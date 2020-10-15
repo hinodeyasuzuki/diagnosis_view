@@ -38,7 +38,7 @@ $introMode 		= ( isset($_GET["intro"]) ? (int)($_GET["intro"]) : 0 );
 $translateMode 	= ( isset($_GET["translate"]) ? (int)($_GET["translate"]) : 0 );
 
 // forcemode set developlevel
-$forceMode 		= ( isset($_GET["fm"]) ? (int)($_GET["fm"]) : 1 );
+$forceMode 		= ( isset($_GET["fm"]) ? (int)($_GET["fm"]) : 4 );
 
 $forceModeDefs = [
 	//useCode, debugMode, useWorker
@@ -180,8 +180,9 @@ foreach ( $lang as $param => $value ) {
 	if ( substr($value,0,5) == "funct" ) {
 		$jssets .= "lang.".$param."=" . str_replace( "'", "\\'",$value ) .";\n";
 	} else {
-		//$jssets .= "lang.".$param."='" . str_replace( "'", "\\'",$value ) ."';\n";
-		$jssets .= "lang.".$param."='q@" . str_rot13(base64_encode(str_replace( "'", "\\'",str_replace( "\"", "\\\"", $value )))) ."';\n";
+		$jssets .= "lang.".$param."='" . str_replace( "'", "\\'",$value ) ."';\n";
+		// semi crypt of js code
+		//$jssets .= "lang.".$param."='q@" . str_rot13(base64_encode(str_replace( "'", "\\'",str_replace( "\"", "\\\"", $value )))) ."';\n";
 	}
 }
 $jssets .= "</script>";
