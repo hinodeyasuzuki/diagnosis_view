@@ -8,6 +8,8 @@ This program is view logic for home eco diagnosis system. If you want to change 
 
 The sample logic on Japanese is set on /dist/ directory. You can test the view to run index.php.
 
+PHPについては、言語や、画面の種類を構成するために使用しているのみで、診断実行中は画面遷移を行いません。このため、パラメータを設定して実行させた状態で、ソースコードだけ抜き出してhtmlファイルを作成することで、phpなしで動作します。
+
 
 ## Demo
 https://www.hinodeya-ecolife.com/diagnosis/?lang=ja	Japanese Default
