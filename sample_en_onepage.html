@@ -7,7 +7,6 @@
 	<link href="view/common.css" rel="stylesheet" type="text/css" />
 	<link href="view/view_focus/layout-focus.css" rel="stylesheet" type="text/css" />
 		<link rel='alternate' hreflang='ja' href='./?lang=ja&v=2' />
-	<link rel='alternate' hreflang='cn' href='./?lang=cn&v=2' />
 	<link rel='alternate' hreflang='zh' href='./?lang=zh&v=2' />
 	<link rel='alternate' hreflang='en' href='./?lang=en&v=2' />
 	<link rel='alternate' hreflang='fr' href='./?lang=fr&v=2' />
@@ -46,7 +45,7 @@
 
 		<div id="header_attension">
 			<p>
-				2019/05/06				<a href="https://www.hinodeya-ecolife.com">Hinodeya Institute for Ecolife co.ltd.</a>
+				2020/10/15				<a href="https://www.hinodeya-ecolife.com">Hinodeya Institute for Ecolife co.ltd.</a>
 				(There is no guarantee of the suggested numerical value because it is an operation model.You can develop according to your needs.)			</p>
 		</div>
 
@@ -88,105 +87,10 @@
 		</div>
 
 		<div id="about" style="display:none">
-			﻿<h2> About how to use energy saving diagnosis </h2>
-<p> Anyone can use this energy-saving diagnosis free of charge, but it does not guarantee the accuracy of the results. Please use it as a hint to promote energy conservation. </p>
-<p> You can not use the back button of the browser. </p>
-
-<div style="margin:20px;padding:20px;background-color:#fbb;">
-privacy policy
-<ul>
-<li>Since this diagnostic software is executed by downloading the calculation logic itself to the terminal, the entered value is never sent to other than the user terminal.</li>
-<li>This page uses Google Analitics to understand usage situation.</li>
-</ul>
-
-</div>
-
-<h3> Recommended diagnostic screen </h3>
-<p> Although it is the same diagnostic content, there are three kinds of designs. If you want to easily tackle "<a href="./?lang=en&v=3"> simplified version </a>", if you want to see the outline of diagnosis, "<a href =" ./?lang=en&v=2"> List screen version </a> is recommended. Also, if you want to make a detailed detailed diagnosis, <a href="./?lang=en&v=0"> detailed version </a> is also available. In any case, you can proceed to more detailed diagnosis while taking over the data you filled in. </p>
-
-<h3> Content of diagnosis result </h3>
-<ul>
-<li> Countermeasures: Approximately 70 Items Calculate prepared countermeasures and select effective CO2 reduction measures for your home. We will show not only the CO2 reduction amount but also the reduction amount of the utility fee, so please refer to thinking about our efforts. In the list screen version and detailed version, you can choose a combination of countermeasures and can simulate how much reduction can be done at home. You also get <a class="button" href="./?lang=en">measure list</a>.</li>
-<li> Comparison: You can compare whether the energy consumption is high or low, compared with the same family number, local family. If there are 100 households in a similar environment, it also shows how many. </li>
-<li> Breakdown: We estimate what is the main cause of CO2 emissions in our household. For many applications, it is effective to take measures. </li>
-</ul>
-
-			<h2>Parameters</h2>
-<form action="./" method="get">
-<ul>
-	<li><label for="t">target</label>
-	<select id="t" name="t">
-		<option value="1" selected>home</option>
-		<option value="2">office(only japan)</option>
-	</select>
-	</li>
-
-	<li><label for="v">view mode</label>
-	<select id="v" name="v">
-		<option value="3" selected>easy</option>
-		<option value="2">one page</option>
-		<option value="0">detail</option>
-		<option value="1">button type</option>
-	</select>
-	</li>
-
-	<li><label for="intro">introduction</label>
-	<select id="intro" name="intro">
-		<option value="0" selected>no</option>
-		<option value="1">yes(only one page type)</option>
-	</select>
-	</li>
-
-	<li><label for="lang">language</label>
-	<select id="lang" name="lang">
-		<option value="en" selected>English in Japan</option>
-		<option value="ja">Japanese in Japan</option>
-		<option value="zh" >Chinese in China</option>
-		<option value="fr" >French in Japan</option>
-	</select>
-	</li>
-
-	<li><label for="translate">google translate</label>
-	<select id="translate" name="translate">
-		<option value="0" selected>no</option>
-		<option value="1" >yes</option>
-	</select>
-	</li>
-
-</ul>
-<input type="submit" name="submit" value="start diagnosis">
-</form>
-
-<p> By passing the character string of the saved data in the <a href="./" target="_blank"> ./? data =*** </a> GET format as other parameters, input data You can obtain diagnostic results by hand. Press the "Save" button to display the dialog. </p>
-
-<h2> Technical explanation on energy saving diagnosis </h2>
-<p> This diagnosis is provided by Hinode and Hitachi Eco Life Institute (Hinodeya Institute for Ecolife co.). It is a review of the calculation logic of 'Eko diagnosis' that is currently being advanced by the Ministry of the Environment from the basics, and it is designed to be compatible with flexible systems such as multilingual. </p>
-<p> Effective measures will vary depending on the energy use situation of home and office. By answering within the range to understand, it is possible to analyze and suggest countermeasures with more families situation. However, you do not need to forcibly answer items you do not know. Through logic that guesses the usage situation, appropriate measures are being proposed without having to forcibly answer. </p>
-<p> We propose a motion model, and we are calculating approximate numerical values ​​according to input for the proposed contents, but there is no guarantee of accuracy or operation. If inappropriate suggestions or numbers are output, we would be pleased if you could contact us. We will respond to development separately for systems that have reviewed the diagnostic logic. </p>
-
-<h2> Development record </h2>
-<p> January 17, 2011 Start of Diagnostic Platform Development Project </p>
-<p> May 6 th, 2011 Platform first action version by ActionScrpt 3 </p>
-<p> Organize terms on February 17, 2014 </p>
-<p> Rewrote Javascript on April 12, 2016. Development code D6. </p>
-<p> December 19, 2016 We divided the design and logic and combined business diagnosis and home diagnosis. We created a smart version with diagnostic progress by button operation. </p>
-<p> March 2, 2017 I organized the separation between the smart screen and the PC screen. </p>
-<p> March 21, 2017 I made the buttons on the smart screen clearer. </p>
-<p> April 11, 2017 Elaboration of the whole household sector, hot water supply, television, refrigerator logic. </p>
-<p> Preparation of Question Limited Version on April 17, 2017. Fixed a problem that question refreshing is not done when returning to the input screen. </p>
-<p> Color-coded on 18th April 2017 proposal content. </p>
-<p> Publication of mode setting, April 28, 2017, bug fix that room can not be added, addition of profit </p>
-<p> May 1, 2017 Fixed problem that room /device addition became 2 or more </p>
-<p> Fixed a problem that could not be displayed on IE on June 21, 2017. IE 10 or higher is supported. </p>
-<p> Creating a simplified version on June 27, 2017. Corresponding error in continuous display of sunlight. </p>
-<p> July 3, 2017 Corresponding effect display of combination measures. </p>
-<p> August 12, 2017 integration with foreign languages ​​and regional versions. Fixed a bug where CO2 breakdown is returned to the whole by input. Enhancement of heating load calculation. </p>
-<p> Fixed an error point on input of kerosene on August 21, 2017. </p>
-<p> Creating a top screen on August 31, 2017. Login function under development. </p>
-<p> Data migration from list version to detailed version, September 4, 2017, correction of smart screen. </p>
-<p> September 10, 2017 Organize language files, create English version. </p>
-
-
+			<br />
+<b>Warning</b>:  include(./logic_JP_en/view/en_about.html): failed to open stream: No such file or directory in <b>C:\www\diagnosis\diagnosis_view\view\view_focus\template-focus.html</b> on line <b>98</b><br />
+<br />
+<b>Warning</b>:  include(): Failed opening './logic_JP_en/view/en_about.html' for inclusion (include_path='C:\xampp73\php\PEAR') in <b>C:\www\diagnosis\diagnosis_view\view\view_focus\template-focus.html</b> on line <b>98</b><br />
 		</div>
 
 		<div id="top" style="display:none">
@@ -223,213 +127,213 @@ privacy policy
 		</div>
 	</div>
 
-	<script>var targetMode=1;var debugMode=false;var dispMode=2;var languageMode='en';var focusMode=2;var useWorker=true;var useCode=3;var messhownumber=7;var hideAverage='0';var hidePrice='0';var includeminjs='dist/worker_JP_en.js';var includesumjs='dist_develop/worker_JP_en.js';var includemincore='dist/d6home_core.min.js';var includeminlocalize='dist/d6home_JP_en.min.js';var lang={};
-lang.d6folder='q@Yv9fo2AuoTy6MI9XHS9yot==';
-lang.localizeCode='q@FyOsMJ4=';
-lang.pageLanguage='q@FyOsMJ4=';
-lang.code='q@MJ4=';
-lang.home_title='q@FT91p2Ibo2kxVTIhMKWarFOmLKMcozptMTyuM25ip2ym';
-lang.home_joy_title='q@EJ5ypzq5VUAuqzyhMlOxnJSaoz9mnKZto2LtnT9gMFNbMJSmrFOyLKAyXD==';
-lang.countfix_pre_after='q@ZD==';
-lang.show_electricity='q@ISWIED==';
-lang.show_gas='q@ISWIED==';
-lang.show_kerosene='q@ISWIED==';
-lang.show_briquet='q@ExSZH0H=';
-lang.show_area='q@ExSZH0H=';
-lang.show_gasoline='q@ISWIED==';
-lang.electricitytitle='q@EJkyL3ElnJAuoN==';
-lang.gastitle='q@M2Sm';
-lang.kerosenetitle='q@n2Ilo3AyozH=';
-lang.briquettitle='q@DaWcpKIyqUEypj==';
-lang.areatitle='q@ETymqUWcL3DtnTIuqN==';
-lang.gasolinetitle='q@M2Smo2kcozH=';
-lang.electricityunit='q@n1qb';
-lang.gasunit='q@oGZ=';
-lang.keroseneunit='q@GN==';
-lang.briquetunit='q@n2p=';
-lang.areaunit='q@GHb=';
-lang.gasolineunit='q@GN==';
+	<script>var targetMode=1;var debugMode=false;var viewMode=2;var languageMode='en';var focusMode=2;var useWorker=false;var useCode=3;var messhownumber=7;var hideAverage='0';var hidePrice='0';var includemincore='dist/d6home_core.min.js';var lang={};
+lang.d6folder='./logic_JP_en';
+lang.viewfolder='./view_JP_en';
+lang.localizeCode='JP_en';
+lang.pageLanguage='JP_en';
+lang.code='en';
+lang.home_title='Household energy saving diagnosis';
+lang.home_joy_title='Energy saving diagnosis of home (easy ease)';
+lang.countfix_pre_after='1';
+lang.show_electricity='TRUE';
+lang.show_gas='TRUE';
+lang.show_kerosene='TRUE';
+lang.show_briquet='FALSE';
+lang.show_area='FALSE';
+lang.show_gasoline='TRUE';
+lang.electricitytitle='Electrical';
+lang.gastitle='gas';
+lang.kerosenetitle='kerosene';
+lang.briquettitle='Briquettes';
+lang.areatitle='District heat';
+lang.gasolinetitle='gasoline';
+lang.electricityunit='kWh';
+lang.gasunit='m3';
+lang.keroseneunit='L';
+lang.briquetunit='kg';
+lang.areaunit='MJ';
+lang.gasolineunit='L';
 lang.point_disp=function(num) {return num + "points"};;
-lang.priceunit='q@JJIh';
-lang.co2unit='q@n2p=';
-lang.energyunit='q@E0b=';
-lang.monthunit='q@oJ9h';
-lang.yearunit='q@rJIupt==';
-lang.startPageName='q@G3MypzSfoPNbp2ygpTkyXD==';
-lang.header_attension='q@XSEbMKWyVTymVT5iVTq1LKWuoaEyMFOiMvO0nTHtp3IaM2ImqTIxVT51oJIlnJAuoPO2LJk1MFOvMJAuqKAyVTy0VTymVTShVT9jMKWuqTyiovOgo2EyoP5Mo3HtL2ShVTEyqzIfo3NtLJAwo3WxnJ5aVUEiVUyiqKVtozIyMUZhXD==';
-lang.dataClear='q@ETIfMKEyVTSfoPOcoaO1qPOxLKEuYvOOpzHtrJ91VR9YYw8=';
-lang.savetobrowser='q@FKDtp2S2MJDtnJ4tqTuyVTWlo3qmMKVh';
-lang.savedataisshown='q@ITuyVUAuqzIxVUMuoUIyplQvtVivtVgupzHtLKZtMz9foT93pl4=';
+lang.priceunit='Yen';
+lang.co2unit='kg';
+lang.energyunit='GJ';
+lang.monthunit='mon';
+lang.yearunit='year';
+lang.startPageName='Overall (simple)';
+lang.header_attension='(There is no guarantee of the suggested numerical value because it is an operation model.You can develop according to your needs.)';
+lang.dataClear='Delete all input data. Are you OK.?';
+lang.savetobrowser='It saved in the browser.';
+lang.savedataisshown='The saved values ​​are as follows.';
 lang.QuestionNumber=function(numques, nowques) {return  "(" + nowques + "th in " + numques + " questions）"};;
-lang.youcall='q@rJ91';
-lang.youcount='q@FT91p2Ibo2kx';
-lang.totalhome='q@I2uioTHtnT91p2Ibo2kx';
+lang.youcall='you';
+lang.youcount='Household';
+lang.totalhome='Whole household';
 lang.comparehome=function(target) {return "The same household size"+target+"peoplle"};;
 lang.rankin100=function(count) {return "The rank is " + count +" in the 100."};;
-lang.rankcall='q@';
+lang.rankcall='';
 lang.co2ratio=function(ratio) {return "　CO2 emission is" + ratio +"times to the average"};;
-lang.co2compare06='q@FKDtnKZtoKIwnPOfMKAmVUEbLJ4tLKMypzSaMF4tFKDtnKZtLFO2MKW5VT5cL2HtoTyzMF4=';
-lang.co2compare08='q@FKDtnKZtoTImplO0nTShVTS2MKWuM2HhVRy0VTymVTRtq29hMTIlMaIfVTkcMzHh';
-lang.co2compare10='q@FKDtnKZtLJWiqKDtqTuyVUAuoJHtoTI2MJjtLKZtqTuyVTS2MKWuM2Hh';
-lang.co2compare12='q@FKDtnKZtp29gMKqbLKDtnTyanTIlVUEbLJ4tqTuyVTS2MKWuM2HhVSEbMKWyVUAyMJ1mVUEiVTWyVUOfMJ50rFOiMvOlo29gVTMipvOlMJE1L3Eco24tnJ4tqKEcoTy0rFOwo3A0plOxqJHtqT8tnJ1jpz92MJ1yoaDh';
-lang.co2compare14='q@FKDtnKZtoTSlM2IlVUEbLJ4tqTuyVTS2MKWuM2HhVSEbMKWyVUAyMJ1mVUEiVTWyVUOfMJ50rFOiMvOlo29gVTMipvOlMJE1L3Eco24tnJ4tqKEcoTy0rFOwo3A0plOxqJHtqT8tnJ1jpz92MJ1yoaDh';
+lang.co2compare06='It is much less than average. It is a very nice life.';
+lang.co2compare08='It is less than average. It is a wonderful life.';
+lang.co2compare10='It is about the same level as the average.';
+lang.co2compare12='It is somewhat higher than the average. There seems to be plenty of room for reduction in utility costs due to improvement.';
+lang.co2compare14='It is larger than the average. There seems to be plenty of room for reduction in utility costs due to improvement.';
 lang.rankcomment=function(same,youcount,rank) {return "in 100" + youcount + " same to your home、your rank is #" +   youcount+ "<br>"};;
-lang.itemize='q@DaWyLJgxo3qh';
-lang.itemname='q@EzyyoTD=';
-lang.percent='q@HTIlL2IhqTSaMFNbWFx=';
-lang.measure='q@GJIup3IlMKZ=';
-lang.merit='q@E29iMPO2LJk1MD==';
-lang.select='q@D2uinJAy';
+lang.itemize='Breakdown';
+lang.itemname='Field';
+lang.percent='Percentage (%)';
+lang.measure='Measures';
+lang.merit='Good value';
+lang.select='Choice';
 lang.itemizecomment=function(main3,sum) {return main3+"is big source in your home,  and top three items emit" + sum+"% of CO2 form your house.。hese large field measures are effective."};;
-lang.effectivemeasures='q@EJMzMJA0nKMyVT1yLKA1pzIm';
+lang.effectivemeasures='Effective measures';
 lang.comment_combined_reduce=function(percent,fee,co2) {return "　You can reduce  " + percent+"%, " + ( hidePrice != 1  ? fee +"yen of energy cost and ":"") + co2+"kg of CO2 emittion annualy.  If you are already working on it, this means that you are doing an eco-life that will only produce these results."};;
 lang.titlemessage=function(title) {return  title+" is effective."};;
 lang.co2reduction=function(co2) {return "You can reduce " + co2+"kg of CO2 emission."};;
 lang.reducepercent=function(name,percent) {return "With these measures you can reduce " +percent+"% from " + name};;
-lang.co2minus='q@GTy2nJ5aVUqcqTuiqKDtD08lVTIgnKAmnJ9hplOwLJ4tLzHtLJAbnJI2MJDh';
-lang.error='q@jdNdVRy0VTymVUWiqJqbVTImqTygLKEyVTWyL2S1p2HtqTuypzHtnKZtoz90VTEyqTScoTIxVTIhqUW5Yt==';
+lang.co2minus='Living without CO2 emissions can be achieved.';
+lang.error=' * It is rough estimate because there is not detailed entry.';
 lang.feereduction=function(fee) {return "You can save" + fee+"yen per year."};;
-lang.feenochange='q@ITuypzHtnKZtoz8tL2uuozqyVTyhVUI0nJkcqUxtMKujMJ5mMKZtMKEwYt==';
+lang.feenochange='There is no change in utility expenses etc.';
 lang.initialcost=function(price,lifetime,load) {return "To purchase newly, it costs about" + price+"yen (reference price), devided " + lifetime+"year of life, your total cost will be"+ load+"yen per year."};;
 lang.payback=function(change,totalchange,down) {return "On the other hand, the utility cost will be saved for " + change+ "yen per year, so the total burden will be" + totalchange +(down?"yen you can save every year in total.":"yen per year." )};;
-lang.payback1month='q@JJ91VTAuovOaMKDtLzSwnlO3nKEbnJ4tLFOgo250nP4=';
+lang.payback1month='You can get back within a month.';
 lang.paybackmonth=function(month) {return "You can get back in" + month+"months"};;
 lang.paybackyear=function(year) {return "You can get back on about" + year+"years."};;
-lang.paybacknever='q@FJ4tLJExnKEco24fVTy0VTymVTygpT9mp2yvoTHtqT8tqTSeMFO0nTHto3WcM2yhLJjtqzSfqJHtq2y0nPO0nTHtqKEcoTy0rFOwo3A0VUWyMUIwqTyiovOuoJ91oaDtLaxtqTuyVUOlo2E1L3EmVTkcMzI0nJ1yYt==';
+lang.paybacknever='In addition, it is impossible to take the original value with the utility cost reduction amount by the products lifetime.';
 lang.notinstallfee=function(fee) {return "The utility cost will be" + fee+"yen cheaper."};;
-lang.monthlytitle='q@EKA0nJ1uqTIxVUI0nJkcqUxtL29mqPOjMKVtoJ9hqTt=';
-lang.month='q@GJ9hqTt=';
-lang.energy='q@MJ5ypzq5';
-lang.button_clear='q@D2kyLKV=';
-lang.button_savenew='q@GzI3VUA0o3WuM2H=';
-lang.button_save='q@H2S2MD==';
-lang.button_open='q@o3Oyot==';
-lang.button_close='q@L2kip2H=';
-lang.button_showall='q@H2uiqlOuoTj=';
-lang.add='q@LJEx';
-lang.button_menu='q@oJIhqD==';
-lang.button_back_toppage='q@DzSwnlO0olO0nTHtMzylp3DtpTSaMD==';
-lang.button_back='q@HzI0qKWh';
-lang.button_prev='q@Ez9lq2SlMN==';
-lang.button_next='q@ozI4qN==';
-lang.button_top='q@IT9j';
-lang.button_input='q@EJ50pax=';
-lang.button_queslist='q@HKIyp3Eco24tGTymqN==';
-lang.button_diagnosis='q@ETyuM25ip2ymVUOuM2H=';
-lang.button_measures='q@GJIup3IlMD==';
-lang.button_selectcategory='q@EKMuoUIuqTyiovOznJIfMN==';
-lang.button_calcresult='q@D2SfL3IfLKEco24tpzImqJk0';
-lang.button_about='q@D29goJIhqTSlrD==';
-lang.button_fullversion='q@EaIfoPOzqJ5wqTyiovO2MKWmnJ9h';
-lang.clear_confirm='q@GTymqPOgo2Ey';
-lang.button_co2emission='q@D08lVTIgnKAmnJ9hpj==';
-lang.button_firstenergy='q@HUWcoJSlrFOyozIlM3x=';
-lang.button_energyfee='q@IKEcoTy0rFOwo3A0pj==';
-lang.home_button_intro1='q@I2Htq2yfoPOjpz9jo3AyVTIzMzIwqTy2MFOyozIlM3xtp2S2nJ5aVT1yLKA1pzImVTSwL29lMTyhMlO0olOyozIlM3xtMKS1nKOgMJ50VTyhVUyiqKVtnT9gMFOuozDtnT93VUEiVUImMFOcqP4tITuypzHtLKWyVTSvo3I0VQVjVUS1MKA0nJ9hplOuLz91qPObo3ptqT8tqKAyVTIhMKWarFOuqPObo21yYvOWqPOcplOyoz91M2ttqT8tLJ5mq2IlVUS1MKA0nJ9hpljtp28tnJLtrJ91VTShp3qypvjtrJ91VTAuovOmqJqaMKA0VT1yLKA1pzImVUEbLKDtq2IlMFOupUOlo3OlnJS0MFOzo3VtrJ91pvObo21yYt==';
-lang.home_button_intro2='q@ITuyVTyhMz9loJS0nJ9hVUyiqFOyoaEypvOwLJ4to25frFOvMFO2nJI3MJDtLaxtrJ91VUImnJ5aVUEbnKZtqTIloJyhLJjfVTy0VUqcoTjtoz90VTSwL3IgqJkuqTHto24tqTuyVUAypaMypv4=';
-lang.home_button_startdiagnosis='q@H3EupaDtMTyuM25ip2ym';
-lang.home_button_about='q@DJWiqKDtqTucplOxnJSaoz9mnKZ=';
-lang.home_button_result='q@IzyyqlO0nTHtpzImqJk0pj==';
-lang.home_button_retry='q@HzImpT9hMPOuM2Scot==';
-lang.home_button_average='q@DKMypzSaMFOwo21jLKWcp29h';
-lang.home_button_monthly='q@GJ9hqTufrFOwnTShM2H=';
-lang.home_button_measure='q@EJMzMJA0nKMyVT1yLKA1pzIm';
-lang.home_button_resultmessage='q@I2HtL29gpTSlMFO0nTHtLKMypzSaMFO3nKEbVTRtM3WupTthVSEbMFOyMzMyL3Dtq2uyovOyrTIwqKEcozptKPqyMzMyL3EcqzHtoJIup3IlMKApWlOcplOxnKAjoTS5MJDtnJ4tqTuyVT1cMTEfMFOapzSjnP4=';
-lang.home_button_measuremessage='q@DFOfnKA0VT9zVTIzMzIwqTy2MFOwo3IhqTIloJIup3IlMKZhVRyzVUyiqFOmMJkyL3DtqTuyVTIzMzIwqPO3nJkfVTWyVTEcp3OfLKyyMPOcovO0nTHtM3WupTth';
-lang.home_button_pagemessage='q@JJ91VTAuovOlMKAjo25xVTyhVTEyqTScoPOvrFOmpTIwnJM5nJ5aVUEbMFOznJIfMP4tJJ91VTAuovOuMTDtpz9ioKZtLJ5xVTIkqJyjoJIhqPO3nKEbVRSxMP4=';
-lang.home_focus_title_after='q@GTymqPOgo2Ey';
-lang.intro1='q@I2IfL29gMFO0olOhMKptMJ5ypzq5VUAuqzyhMlOxnJSaoz9mnKZtp29zqUqupzHtXRD2XF4tDaxtnJ5jqKE0nJ5aVTuiqlO0olO1p2HtMJ5ypzq5VT5iqljtrJ91VTAuovOwLJkwqJkuqTHtLJ5xVUOlo3Oip2HtMJMzMJA0nKMyVTIhMKWarFOmLKMcozptoJIup3IlMKZh';
-lang.intro2='q@DKZtMzSlVTSmVUyiqFOwLJ4tqJ5xMKWmqTShMPjtpTkyLKAyVTAbo29mMFObo3ptqT8tqKAyVUEbMFOwqKWlMJ50VTIhMKWarF4tFFOxolOho3DtoJyhMPOcMvOWVTEiVT5iqPOwLKWyVTSvo3I0VTy0YPOmn2yjVUEbMFOkqJImqTyiovOWVTEiVT5iqPO1ozEypaA0LJ5xYt==';
-lang.intro3='q@DJ5uoUymnKZtpzImqJk0plOuL2AipzEcozptqT8tnJ5jqKDtLKWyVTEcp3OfLKyyMPOuqPOuoaxtqTygMF4=';
-lang.intro4='q@FKDtnKZtLJ4tMKA0nJ1uqTyiovOlMKA1oUDtqTuuqPOuozSfrKcyMPOQGmVtMJ1cp3Aco25mVTW5VUO1paOip2HhVSEbMFOfMJM0VTymVUyiqKVtL3IlpzIhqPOmnKE1LKEco24hVSEbMFOlnJqbqPOmnT93plOuVUAcoJyfLKVtMzSgnJk5VPuvqKAcozImplOipTIlLKEipvxtLKZtLFOwo21jLKWcp29hYvOHnTHtL2IhqTIlVUAbo3qmVUWyMUIwqTyiovOlMKA1oUEmVUqbMJ4toJIup3IlMKZtLKWyVUAyoTIwqTIxYt==';
-lang.intro5='q@FFOuoFOwnTSlqTyhMlO0nTHtqKEcoTy0rFOvnJkfVTW5VT1ioaEbYt==';
-lang.intro6='q@EJMzMJA0nKMyVTIhMKWarFOmLKMcozptoJIup3IlMKZtLKWyVTEcp3OfLKyyMPOzpz9gVUEcoJHtqT8tqTygMF4tD2kcL2fto24tqTuyVUEcqTkyVUEiVTI4pTkunJ4tnJ4tMTI0LJyfYvOOVUOlo2McqTSvoTHt4cvSVTymVTRtoJIup3IlMFO0nTS0VTAuovO0LJgyVUEbMFOipzyanJ5uoPOyqzIhVTyzVUEbMKWyVTymVTRtpUIlL2uup2HtL29mqP4tFJLtrJ91VTAfnJAeVT9hVUEbMFOlnJqbqPOwo2k1oJ4tLJ5xVUAyoTIwqPOcqPjtqTuyVUWyp3IfqPOcovO0nTHtL2SmMFOiMvOwo3IhqTIloJIup3IlMKZtq2yfoPOvMFOlMJMfMJA0MJDtnJ4tqTuyVT1cMTEfMFOapzSjnP4=';
-lang.intro7='q@JJ91VTAuovOmLKMyVUEbMFOcoaO1qPOcozMipz1uqTyiovOcovO0nTHtLaWiq3Aypv4=';
-lang.intro8='q@ITucplOmL3WyMJ4tnKZtoTygnKEyMPO0olOuLz91qPNlZPOcqTIgpljtLaI0VUyiqFOwLJ4tLJkmolOxolOuVTEyqTScoTIxVTEcLJqho3Acpl4tITuyovOjpzImplOoET9hMI0tnJ1gMJEcLKEyoUxtLJ5xVUA0LKW0VTEcLJqho3Acpl4=';
-lang.home_easy_title='q@EJAiYJAbMJAeVTIup3xtMz9lVTAioJMipaEuLzkyVTkcqzyhMj==';
-lang.home_easy_step1='q@DFOkqJImqTyiot==';
-lang.home_easy_step2='q@D29gpTSlnKAiot==';
-lang.home_easy_step3='q@D2uupzSwqTIlnKA0nJZ=';
-lang.home_easy_step4='q@GJIup3IlMKZ=';
-lang.home_easy_toptitle='q@I2u5VTEiVT5iqPO5o3HtqUW5VUEiVTkiq2IlVUEbMFObo3ImMKZtqKEcoTy0rFOvnJkfCj==';
-lang.home_easy_top1='q@VSjaEJ5ypzq5VUAuqzyhM1jaVTymVT1cp3IhMTIlp3Eio2DtnJ4tFzSjLJ4hVRy0VTymVT5iqPOmo21yqTucozptqT8tKPqyozE1pzIpWlOvqKDtqT8tMJ5lnJAbVUyiqKVtoTyzMF4tD29mqUZtMz9lVTkcM2u0VTShMPObMJS0VTSlMFOwnTIupPjtoTyzMFOvMJAioJImVTAioJMipaEuLzkyYPOuozDtnKDtq2yfoPOuoUAiVTWyVTMipvO0nTHtMaI0qKWyVTAbnJkxpzIhYt==';
-lang.home_easy_top2='q@H2y4VUS1MKA0nJ9hplO3nJkfVUEyoTjtrJ91VUqbLKDtoJIup3IlMKZtq2IlMFOlnJqbqPOzo3VtrJ91pvOfnJMyYvODoTIup2HtqUW5VTIwol1wnTIwnlOcovNmVT1coaI0MKZh';
-lang.home_easy_top3sm='q@XvOWqPOcplOwo21joTI0MJk5VTMlMJHhVSyiqFOxolOho3DtozIyMPO0olOyoaEypvOcozMipz1uqTyiovO0olOcMTIhqTyzrFO5o3HfVUA1L2ttLKZtozSgMFOipvOyoJScoPOuMTElMKAmYvOGnJ5wMFO0nTymVTEcLJqho3A0nJZtp29zqUqupzHtnKZtMKuyL3I0MJDtLaxtMT93ozkiLJEcozptqTuyVTAuoTA1oTS0nJ9hVTkiM2ywVTy0p2IfMvO0olO0nTHtqTIloJyhLJjfVUEbMFOyoaEypzIxVUMuoUIyVTymVT5yqzIlVUAyoaDtqT8to3EbMKVtqTuuovO0nTHtqKAypvO0MKWgnJ5uoP5HnTymVUOuM2HtqKAyplOUo29aoTHtDJ5uoTy0nJAmVUEiVUIhMTIlp3EuozDtqKAuM2Htp2y0qJS0nJ9hYt==';
-lang.home_easy_top_button_start='q@H3EupaDtMTyuM25ip2ym';
-lang.home_easy_top_button_about='q@D29goJIhqTSlrD==';
-lang.home_easy_p5title='q@HTkyLKAyVTShp3qypvO0nTymVUS1MKA0nJ9hpj==';
-lang.home_easy_p5_1='q@HTkyLKAyVTAbo29mMFO0nTHto3O0nJ9hVUEbLKDtpz91M2ufrFOupUOfnJImYvOWMvO5o3HtMT8toz90VUIhMTIlp3EuozDfVUyiqFOxolOho3DtnTS2MFO0olOuoaA3MKVh';
-lang.home_easy_p5_button_next='q@IzyyqlOlMKA1oUEm';
-lang.home_easy_p2title='q@D29gpTSlMJDtqT8tLKMypzSaMFObo3ImMJuioTEm';
-lang.home_easy_p2_button_next='q@FFO3nJkfVTAfLKWcMaxtqTuyVTWcMlOwLKImMD==';
-lang.home_easy_p3title='q@D2uupzSwqTIlnKA0nJAmVT9zVUyiqKVtoTyzMD==';
-lang.home_easy_p3_1='q@FKDtnKZtqTuyVUWyp3IfqPOiMvOuozSfrKccozptq2uypzHtD08lVTAioJImVT91qP4tITuyVTkyMaDtp2uiq3ZtrJ91pvObo3ImMFNfVUEbMFOlnJqbqPOmnT93plO0nTHtp3EuozEupzDtqzSfqJHto2LtqTuyVTuioJHtq2uip2HtL29hMTy0nJ9hVUWyp2IgLzkyplO5o3Hh';
-lang.home_easy_p3_button_next='q@HzIwo21gMJ5xMJDtoJIup3IlMKZtnTIlMD==';
-lang.home_easy_p4title_pre='q@';
-lang.home_easy_p4title_after='q@VSWyL29goJIhMTIxVR1yLKA1pzIm';
-lang.home_easy_p4_button_next='q@ITuyVT1ip3DtpzIwo21gMJ5xMJDtoJIup3IlMKZ=';
-lang.home_easy_p4_1='q@FKDtnKZtLFOlMJAioJ1yozEyMPOyozIlM3xtp2S2nJ5aVT1yLKA1pzHtqTScoT9lMJDtqT8trJ91pvObo21yYvOQoTywnlOiovO0nTHtqTy0oTHtqT8tMKujoTScovOcovOxMKEunJjhVSEbMFQvzVHtoJSlnlOiMvOjpz9znKDtnKZtLFOgMJSmqKWyVUEbLKDtL2ShVUEun2HtqTuyVT9lnJqcozSfVTI2MJ4tnJLtqTuypzHtnKZtpUIlL2uup2HtL29mqP4=';
-lang.home_easy_p4_2='q@ITucplOcplOlo3IanPOyp3EcoJS0MF4tI2y0nPOxMKEunJkyMPOxnJSaoz9mnKZfVUyiqFOwLJ4toJSeMFOmqJqaMKA0nJ9hplO0nTS0VT1ipzHtp3IcqTIxVUyiqF4=';
-lang.home_easy_p4_button_next2='q@GJ9lMFOxMKEunJkyMPOxnJSaoz9mnKZtL2ShVTWyVTEiozHtMaWioFObMKWy';
-lang.home_easy_p4_button_next3='q@ITucozgcozpto2LtpzIjoTSwnJ5aVTuioJHtLKOjoTyuozAypj==';
+lang.monthlytitle='Estimated utility cost per month';
+lang.month='Month';
+lang.energy='energy';
+lang.button_clear='Clear';
+lang.button_savenew='New storage';
+lang.button_save='Save';
+lang.button_open='open';
+lang.button_close='close';
+lang.button_showall='Show all';
+lang.add='add';
+lang.button_menu='menu';
+lang.button_back_toppage='Back to the first page';
+lang.button_back='Return';
+lang.button_prev='Forward';
+lang.button_next='next';
+lang.button_top='Top';
+lang.button_input='Entry';
+lang.button_queslist='Question List';
+lang.button_diagnosis='Diagnosis page';
+lang.button_measures='Measure';
+lang.button_selectcategory='Evaluation field';
+lang.button_calcresult='Calculation result';
+lang.button_about='Commentary';
+lang.button_fullversion='Full function version';
+lang.clear_confirm='List mode';
+lang.button_co2emission='CO2 emissions';
+lang.button_firstenergy='Primary energy';
+lang.button_energyfee='Utility costs';
+lang.home_button_intro1='We will propose effective energy saving measures according to energy equipment in your home and how to use it. There are about 20 questions about how to use energy at home. It is enough to answer questions, so if you answer, you can suggest measures that were appropriate for your home.';
+lang.home_button_intro2='The information you enter can only be viewed by you using this terminal, it will not accumulate on the server.';
+lang.home_button_startdiagnosis='Start diagnosis';
+lang.home_button_about='About this diagnosis';
+lang.home_button_result='View the results';
+lang.home_button_retry='Respond again';
+lang.home_button_average='Average comparison';
+lang.home_button_monthly='Monthly change';
+lang.home_button_measure='Effective measures';
+lang.home_button_resultmessage='We compare the average with a graph. The effect when executing \'effective measures\' is displayed in the middle graph.';
+lang.home_button_measuremessage='A list of effective countermeasures. If you select the effect will be displayed in the graph.';
+lang.home_button_pagemessage='You can respond in detail by specifying the field. You can add rooms and equipment with Add.';
+lang.home_focus_title_after='List mode';
+lang.intro1='Welcome to new energy saving diagnosis software (D6). By inputting how to use energy now, you can calculate and propose effective energy saving measures.';
+lang.intro2='As far as you can understand, please choose how to use the current energy. I do not mind if I do not care about it, skip the question I do not understand.';
+lang.intro3='Analysis results according to input are displayed at any time.';
+lang.intro4='It is an estimation result that analyzed CO2 emissions by purpose. The left is your current situation. The right shows a similar family (business operator) as a comparison. The center shows reduction results when measures are selected.';
+lang.intro5='I am charting the utility bill by month.';
+lang.intro6='Effective energy saving measures are displayed from time to time. Click on the title to explain in detail. A profitable ★ is a measure that can take the original even if there is a purchase cost. If you click on the right column and select it, the result in the case of countermeasures will be reflected in the middle graph.';
+lang.intro7='You can save the input information in the browser.';
+lang.intro8='This screen is limited to about 20 items, but you can also do a detailed diagnosis. Then press [Done] immediately and start diagnosis.';
+lang.home_easy_title='Eco-check easy for comfortable living';
+lang.home_easy_step1='A question';
+lang.home_easy_step2='Comparison';
+lang.home_easy_step3='Characteristic';
+lang.home_easy_step4='Measures';
+lang.home_easy_toptitle='Why do not you try to lower the houses utility bill?';
+lang.home_easy_top1=' \'Energy saving\' is misunderstood in Japan. It is not something to \'endure\' but to enrich your life. Costs for light and heat are cheap, life becomes comfortable, and it will also be for the future children.';
+lang.home_easy_top2='Six questions will tell you what measures were right for your life. Please try eco-check in 3 minutes.';
+lang.home_easy_top3sm='* It is completely free. You do not need to enter information to identify you, such as name or email address. Since this diagnostic software is executed by downloading the calculation logic itself to the terminal, the entered value is never sent to other than the user terminal.This page uses Google Analitics to understand usage situation.';
+lang.home_easy_top_button_start='Start diagnosis';
+lang.home_easy_top_button_about='Commentary';
+lang.home_easy_p5title='Please answer this questions';
+lang.home_easy_p5_1='Please choose the option that roughly applies. If you do not understand, you do not have to answer.';
+lang.home_easy_p5_button_next='View results';
+lang.home_easy_p2title='Compared to average households';
+lang.home_easy_p2_button_next='I will clarify the big cause';
+lang.home_easy_p3title='Characteristics of your life';
+lang.home_easy_p3_1='It is the result of analyzing where CO2 comes out. The left shows your house , the right shows the standard value of the home whose condition resembles you.';
+lang.home_easy_p3_button_next='Recommended measures here';
+lang.home_easy_p4title_pre='';
+lang.home_easy_p4title_after=' Recommended Measures';
+lang.home_easy_p4_button_next='The most recommended measures';
+lang.home_easy_p4_1='It is a recommended energy saving measure tailored to your home. Click on the title to explain in detail. The ★ mark of profit is a measure that can take the original even if there is purchase cost.';
+lang.home_easy_p4_2='This is rough estimate. With detailed diagnosis, you can make suggestions that more suited you.';
+lang.home_easy_p4_button_next2='More detailed diagnosis can be done from here';
+lang.home_easy_p4_button_next3='Thinking of replacing home appliances';
 lang.home_easy_measure_show=function(num) {return "Show recommendations at "+ num + "th"};;
-lang.home_maintenance_message='q@ITuyVT1yLKA1pzImVUyiqFObLKMyVUAyoTIwqTIxVTSlMFOuplOzo2kfo3qmYvOOpzHtrJ91VUqipzgcozpto24tnKD/';
-lang.home_maintenance_list='q@H2IfMJA0MJDtoJIup3IlMKZ=';
-lang.home_maintenance_selected='q@FFObLKMyVUAyoTIwqTIxVUEbnKZtL291oaEypz1yLKA1pzH=';
-lang.home_action_title='q@EJSmrFOQnTIwnlOzo3VtGT93VRAupzWiovOVo3ImMD==';
-lang.home_action_step1='q@HKIyp3Eco25m';
-lang.home_action_step2='q@EKMuoUIuqTyiot==';
-lang.home_action_step3='q@GJIup3IlMKZ=';
-lang.home_action_toptitle='q@GTI0KPqmVRAbLJ5aMFO0olOZo3ptD2SlLz9hVRuiqKAy';
-lang.home_action_top1='q@JJ91VTAuovOyLKAcoUxtMzyhMPOwo25zo3W0LJWfMFOcMTIuplO0olOvMFOfo3ptL2SlLz9hYt==';
-lang.home_action_top2='q@';
-lang.home_action_axis1='q@H3ImqTScozSvnJkcqUx=';
-lang.home_action_axis2='q@EJ5ypzq5VRIzMzywnJIhL3x=';
-lang.home_action_axis3='q@H2S2nJ5aVRIhMKWarD==';
-lang.home_action_label1='q@EKuwMJkfMJ50';
-lang.home_action_label2='q@E29iMN==';
-lang.home_action_label3='q@DzSx';
-lang.home_action_good_point='q@E29iMPODo2yhqN==';
-lang.home_action_bad_point='q@DzSxVSOinJ50';
-lang.home_list_message='q@D2uio3AyVUEbMFOwo3IhqTIloJIup3IlMFOmqJy0LJWfMFOzo3VtrJ91VTMlo20tLJ1iozptqTuyp2H=';
-lang.younow='q@D3IlpzIhqPOmqTS0qKZ=';
-lang.youafter='q@DJM0MKVtoJIup3IlMKZ=';
-lang.average='q@LKMypzSaMD==';
-lang.compare='q@D29gpTSlnKAiot==';
-lang.comparetoaverage='q@';
-lang.co2emission='q@D08lVTIgnKAmnJ9hpj==';
-lang.co2reductiontitle='q@D08lVUWyMUIwqTyiovOyMzMyL3D=';
-lang.fee='q@IKEcoTy0rFOwo3A0pj==';
-lang.feereductiontitle='q@HzIxqJA0nJ9hVT9zVUI0nJkcqUxtL29mqN==';
-lang.initialcosttitle='q@FJ5cqTyuoPOcoaMyp3EgMJ50VTSgo3IhqN==';
-lang.loadperyear='q@DJ5hqJSfVTW1pzEyovOuoJ91oaD=';
-lang.primaryenergy='q@HUWcoJSlrFOyozIlM3xtL29hp3IgpUEco24=';
-lang.ohter='q@G3EbMKV=';
-lang.office_title='q@EJSmrFOyozIlM3xtp2S2nJ5aVTEcLJqho3AcplOuqPOvqKAcozImplOyp3EuLzkcp2ugMJ50pj==';
-lang.officecall='q@JJ91pvOwo21jLJ55';
-lang.officecount='q@G2MznJAy';
-lang.totaloffice='q@I2uioTHtMKA0LJWfnKAboJIhqN==';
-lang.officenow='q@D3IlpzIhqPOmqTS0qKZ=';
+lang.home_maintenance_message='The measures you have selected are as follows. Are you working on it?';
+lang.home_maintenance_list='Selected measures';
+lang.home_maintenance_selected='I have selected this countermeasure';
+lang.home_action_title='Easy Check for Low Carbon House';
+lang.home_action_step1='Questions';
+lang.home_action_step2='Evaluation';
+lang.home_action_step3='Measures';
+lang.home_action_toptitle='Let\'s Change to Low Carbon House';
+lang.home_action_top1='You can easily find confortable ideas to be low carbon.';
+lang.home_action_top2='';
+lang.home_action_axis1='Sustainability';
+lang.home_action_axis2='Energy Efficiency';
+lang.home_action_axis3='Saving Energy';
+lang.home_action_label1='Excellent';
+lang.home_action_label2='Good';
+lang.home_action_label3='Bad';
+lang.home_action_good_point='Good Point';
+lang.home_action_bad_point='Bad Point';
+lang.home_list_message='Choose the countermeasure suitable for you from among these';
+lang.younow='Current status';
+lang.youafter='After measures';
+lang.average='average';
+lang.compare='Comparison';
+lang.comparetoaverage='';
+lang.co2emission='CO2 emissions';
+lang.co2reductiontitle='CO2 reduction effect';
+lang.fee='Utility costs';
+lang.feereductiontitle='Reduction of utility cost';
+lang.initialcosttitle='Initial investment amount';
+lang.loadperyear='Annual burden amount';
+lang.primaryenergy='Primary energy consumption';
+lang.ohter='Other';
+lang.office_title='Easy energy saving diagnosis at business establishments';
+lang.officecall='Your company';
+lang.officecount='Office';
+lang.totaloffice='Whole establishment';
+lang.officenow='Current status';
 lang.compareoffice=function(target) {return "On the same scale" + target};;
-lang.button_demand='q@ETIgLJ5x';
-lang.co2unitperyear='q@n2pirJIupt==';
-lang.co2unitpermonth='q@n2pioJ9h';
-lang.feeunitperyear='q@JJIhY3yyLKV=';
-lang.feeunitpermonth='q@JJIhY21iot==';
-lang.energyunitperyear='q@E0birJIupt==';
-lang.energyunitpermonth='q@E0bioJ9h';
+lang.button_demand='Demand';
+lang.co2unitperyear='kg/year';
+lang.co2unitpermonth='kg/mon';
+lang.feeunitperyear='Yen/year';
+lang.feeunitpermonth='Yen/mon';
+lang.energyunitperyear='GJ/year';
+lang.energyunitpermonth='GJ/mon';
 </script>
-		<!--[if IE 9]><script>var a=location.search.substring(1);location.href='./?fm=4&'+a;</script><![endif]-->
-	
-	<script src="view/lib/jquery/jquery.min.js" type="text/javascript"></script>
-	<script src="view/lib/leanModal/jquery.leanModal.min.js" type="text/javascript"></script>
-	<script src="view/lib/jquery.cookie/jquery.cookie.js" type="text/javascript"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" type="text/javascript"></script>
+	<script src="view/js/leanModal/jquery.leanModal.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js" type="text/javascript"></script>
 	<script src="view/main.js" type="text/javascript"></script>
 	<script src="view/createpage.js" type="text/javascript"></script>
 	<script src="view/graph.js" type="text/javascript"></script>
-	<script src="view/lib/D3/d3.min.js"></script>
-	<script src="view/lib/dimple-js/dimple.v2.3.0.min.js"></script>
-	<!--[if lte IE 10]><script>alert("Sorry, this page does not work under IE8, and too slow under IE10.\n Please use IE11 up, chrome, Edge, Firefox or safari.");</script><![endif]--><script src='./localize_JP_en/view/JP_home_2.js' type='text/javascript'></script>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.min.js"></script>
+	<!--[if lte IE 10]><script>alert("Sorry, this page does not work under IE8, and too slow under IE10.\n Please use IE11 up, chrome, Edge, Firefox or safari.");</script><![endif]--><script src='./view_JP_en/JP_home_2.js' type='text/javascript'></script>
+<script src='dist/d6home_core.min.js' type='text/javascript'></script><script src='dist/d6home_JP_en.min.js' type='text/javascript'></script>
 
 	<script>
 	window.onload = function(){
@@ -438,15 +342,6 @@ lang.energyunitpermonth='q@E0bioJ9h';
 	};
 	</script>
 	<script>paramdata='';</script>
-		<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	  ga('create', 'UA-96438552-5', 'auto');
-	  ga('send', 'pageview');
-		</script>
-
 	<script src="view/view_focus/onclick-focus.js" type="text/javascript"></script>
 
 </body>
