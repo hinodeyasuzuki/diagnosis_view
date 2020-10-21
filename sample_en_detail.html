@@ -1,85 +1,109 @@
 
-
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link href="view/common.css" rel="stylesheet" type="text/css" />
 	<link href="view/view_base/layout-base.css" rel="stylesheet" type="text/css" />
-	<title>家庭の省エネ診断</title>
+		<link rel='alternate' hreflang='ja' href='./?lang=ja&v=0' />
+	<link rel='alternate' hreflang='zh' href='./?lang=zh&v=0' />
+	<link rel='alternate' hreflang='en' href='./?lang=en&v=0' />
+	<link rel='alternate' hreflang='fr' href='./?lang=fr&v=0' />
+	<link rel='alternate' hreflang='ko' href='./?lang=ko&v=0' />
+	<link rel='alternate' hreflang='vi' href='./?lang=vi&v=0' />
+	<title>Household energy saving diagnosis</title>
 </head>
 
 <body>
+
 	<div id="leanModalDialog">
-		<input type="button" class="modal_close" value="戻る" tabindex=0>
+		<input type="button" class="modal_close" value="Return" tabindex=0>
 		<div id="modal-contents"></div>
 	</div>
 
 	<div class="contents">
+
 		<div id="header">
-			<h1>家庭の省エネ診断</h1>
+			<h1>Household energy saving diagnosis</h1>
 
 			<div id="headerMenu">
-				<button class="button inmode selected" id="m1" onclick="modeChange('m1');">現状記入</button>
-				<button class="button inmode" id="m2" onclick="modeChange('m2');">対策検討</button>
-				&nbsp;&nbsp;
-				<button class="button" id="btnsave" onclick="dataSave();">保存</button>
-				<button class="button" id="btnclear" onclick="dataClear();">クリア</button>
+				<button class="button inmode selected" id="m1"
+					onclick="modeChange('m1');">Entry</button>
+				<button class="button inmode" id="m2"
+					onclick="modeChange('m2');">Measure</button>
+
+								&nbsp;&nbsp;
+
+				<button class="button" id="btnsave" onclick="dataSave();">Save</button>
+				<button class="button" id="btnclear" onclick="dataClear();">Clear</button>
 				&nbsp;
-				<a class="button inmode" href="./?lang=ja&v=4" target="_blank" tabindex=0>解説</a>
+				<a class="button inmode" href="./?lang=en&v=4" target="_blank"
+					tabindex=0>Commentary</a>
+				<!--
+				<button class="button" id="btnsavenew">New storage</button>
+				<button class="button" id="btnopen">open</button>
+				-->
 			</div>
 
 			<div id="header_attension">
-				<p>2020/10/15					<a href="https://www.hinodeya-ecolife.com/">Hinodeya Institute for Ecolife co.ltd.</a>
-					（動作モデルのため提案数値の保証はありません。ニーズに応じた開発ができます。）</p>
+				<p>
+					2020/10/15					<a href="https://www.hinodeya-ecolife.com/">Hinodeya Institute for Ecolife co.ltd.</a>
+					(There is no guarantee of the suggested numerical value because it is an operation model.You can develop according to your needs.)				</p>
 			</div>
 		</div>
 
-		<!-- preloader -->
+
 		<div class="preloader">
 			<p>now loading diagnosis system</p>
 		</div>
 
-		<!-- front page -->
 		<div id="top" style="display:none">
-			<h2>家庭の省エネ診断で、快適な省エネライフを</h2>
+			﻿<h2>Energy saving diagnosis at home, comfortable energy saving life</h2>
 
-			<div class="topmessage">
-				<p>　地球温暖化から私たちの生活を守るため、30年後の2050年には、CO2をほとんど出さない社会になることが合意されています。すでに日本のCO2排出量は、確実に減少に向かっています。</p>
-				<p>　私たちの生活も、いまある省エネ機器や工夫を組み合わせることで、家庭のCO2排出をマイナスにすることができます。</p>
-				<p>　この省エネ診断では、一人ひとりの生活にあわせて、効果的な対策を計算し、自分でどこまで削減できるのか生活を組み立てることができます。自分にあった省エネ生活がどう作れるか、コンピュータ上で試してみてください。きっと、いい設計がみつかります。</p>
-			</div>
+<div class="topmessage">
+<p>To protect our lives from global warming, it will become a society that does not emit CO2 almost in 2050 (in the future about 30 years). CO2 emissions in Japan have already steadily declined.</p>
+<p>By combining energy saving equipment and ingenuity in our life, we can almost make CO2 out. About 60 such effective measures are prepared for this diagnosis.</p>
+<p>In this energy saving diagnosis, it is possible to calculate effective countermeasures according to the life of each person, and to assemble living how much can be reduced by oneself. Please try on your computer on how to make your life once in a lifetime, energy saving life that suits yourself. Surely, a good design will be found.</p>
+</p>
+</div>
 
-			<div class="button button_top" onclick="top2start();" onkeypress="top2start();" tabindex=0>診断をはじめる</div>
+<div style="margin:20px;padding:20px;background-color:#fbb;">
+privacy policy
+<ul>
+<li>CSince this diagnostic software is executed by downloading the calculation logic itself to the terminal, the entered value is never sent to other than the user terminal.</li>
+<li>This page uses Google Analitics to understand usage situation.</li>
+</ul>
 
-			<div class="topmessage" style="margin-top:30px;">
-				<p>　使い方は簡単です。家庭での生活やエネルギーの使い方など、質問の選択肢を選んでください。わからないものは、どんどん飛ばしてもらって構いません。逆に詳しく診断したい場合には、「分野別」や「詳細版」などより詳しく設定することもできます。</p>
-				<p>　回答に応じて、結果がどんどん変わっていきます。平均とくらべて多いのか少ないのか、どんな機器が問題なのかなど、グラフで示されますので、参考にしてください。有効な対策の順番も変わっていきます。</p>
-				<p>　表示された対策は、おすすめの順で並んでいます。その中から、今すぐでなくても取り組めそうなもの、関心があるものを、チェックして選んでみて下さい。すぐにシミュレーション結果がわかりますので、試しながら2050年までの人生設計をつくりあげてみてください。</p>
-				<p>&nbsp;</p>
-				<p>※このソフトではGoogle Analyticsを用いてアクセス状況の解析を行っています。</p>
-			</div>
+</div>
+
+
+
+
+
+<div class="button button_top" onclick="top2start();" onkeypress="top2start();" tabindex=0>Start Diagnosis</div>
+
+<div class="topmessage" style="margin-top:30px;">
+<p>How to use is easy. Please choose your question choice, such as how to use your home life and energy. You do not mind skipping more things you do not know. Conversely, if you want to make a detailed diagnosis, you can set more detailed information such as "by category" or "detailed version".</p>
+<p>Depending on the answer, the result will change more and more. It will be shown in a graph such as what is more or less than the average, what kind of equipment is a problem, please refer to it. The order of effective countermeasures will also change.</p>
+<p>The displayed countermeasures are arranged in the recommended order. Please check and select something that you are willing to work on even if you are not right now, and interest you. When measures are taken, it is immediately possible to know the simulation result as to how much utility expenses and CO2 emissions of the house are reduced. Please try assembling and trying to create a life design until 2050.</p>
+</div>
+
 		</div>
 
-		<!-- main page -->
 		<div id="divco2">
-			<!-- main/headtab -->
 			<ul id="tab">
 			</ul>
 
-			<!-- main/input pages -->
 			<div class="leftmenu">
-				<ul id='tabcontents'>
-				</ul>
+				<ul id='tabcontents'></ul>
 			</div>
 
-			<!-- main/state result -->
 			<div class="result">
 				<select id="graphChange" onchange="graphChange();">
-					<option value="co2">CO2排出量</option>
-					<option value="energy">一次エネルギー量</option>
-					<option value="money">光熱費</option>
+					<option value="co2">CO2 emissions</option>
+					<option value="energy">Primary energy</option>
+					<option value="money">Utility costs</option>
 				</select>
 				<div id="graph"></div>
 				<div id="average"></div>
@@ -87,11 +111,10 @@
 				<div id="cons"></div>
 			</div>
 
-			<!-- main/measures and result -->
 			<div class="mesmenu" style="display:none">
 				<div id="measure"></div>
 				<div style="text-align:right;">
-					<button style='color:blue;cursor:pointer;'>[全て表示]</button>
+					<button style='color:blue;cursor:pointer;'>[Show all]</button>
 				</div>
 				<p id="totalReduceComment"></p>
 			</div>
@@ -112,209 +135,203 @@
 
 	</div>
 
-	<script>
-// created by diagnosis_view system
-var targetMode=1;var debugMode=false;var viewMode=0;var languageMode='ja';var focusMode=0;var useWorker=false;var useCode=3;var messhownumber=7;var hideAverage='0';var hidePrice='0';var includemincore='dist_sample/d6home_core.min.js';var lang={};
-lang.d6folder='./logic_JP';
-lang.viewfolder='./view_JP';
-lang.localizeCode='JP';
-lang.pageLanguage='JP_ja';
-lang.code='ja';
-lang.home_title='家庭の省エネ診断';
-lang.home_joy_title='家庭の省エネ診断（お気楽版）';
-lang.countfix_pre_after='2';
+	<script>var targetMode=1;var debugMode=false;var viewMode=0;var languageMode='en';var focusMode=0;var useWorker=false;var useCode=3;var messhownumber=7;var hideAverage='0';var hidePrice='0';var includemincore='dist/d6home_core.min.js';var lang={};
+lang.d6folder='./logic_JP_en';
+lang.viewfolder='./view_JP_en';
+lang.localizeCode='JP_en';
+lang.pageLanguage='JP_en';
+lang.code='en';
+lang.home_title='Household energy saving diagnosis';
+lang.home_joy_title='Energy saving diagnosis of home (easy ease)';
+lang.countfix_pre_after='1';
 lang.show_electricity='TRUE';
 lang.show_gas='TRUE';
 lang.show_kerosene='TRUE';
 lang.show_briquet='FALSE';
 lang.show_area='FALSE';
 lang.show_gasoline='TRUE';
-lang.electricitytitle='電気';
-lang.gastitle='ガス';
-lang.kerosenetitle='灯油';
-lang.briquettitle='練炭';
-lang.areatitle='地域熱';
-lang.gasolinetitle='ガソリン';
+lang.electricitytitle='Electrical';
+lang.gastitle='gas';
+lang.kerosenetitle='kerosene';
+lang.briquettitle='Briquettes';
+lang.areatitle='District heat';
+lang.gasolinetitle='gasoline';
 lang.electricityunit='kWh';
 lang.gasunit='m3';
 lang.keroseneunit='L';
 lang.briquetunit='kg';
 lang.areaunit='MJ';
 lang.gasolineunit='L';
-lang.point_disp=function(num) {return num + "点"};;
-lang.priceunit='円';
+lang.point_disp=function(num) {return num + "points"};;
+lang.priceunit='Yen';
 lang.co2unit='kg';
 lang.energyunit='GJ';
-lang.monthunit='月';
-lang.yearunit='年';
-lang.co2unitperyear='kg/年';
-lang.co2unitpermonth='kg/月';
-lang.feeunitperyear='円/年';
-lang.feeunitpermonth='円/月';
-lang.energyunitperyear='GJ/年';
-lang.energyunitpermonth='GJ/月';
-lang.startPageName='全体（簡易）';
-lang.header_attension='（動作モデルのため提案数値の保証はありません。ニーズに応じた開発ができます。）';
-lang.dataClear='入力データを全て削除します。よろしいですか。';
-lang.savetobrowser='ブラウザに保存しました。';
-lang.savedataisshown='保存値は以下のとおりです。';
-lang.QuestionNumber=function(numques, nowques) {return  "（" + numques +"問中" + nowques + "問目）"};;
-lang.youcall='あなた';
-lang.youcount='世帯';
-lang.totalhome='家庭全体';
-lang.comparehome=function(target) {return "同じ世帯人数の"+target+"の家庭"};;
-lang.rankin100=function(count) {return "100" + count +"中順位"};;
-lang.rankcall='位';
-lang.co2ratio=function(ratio) {return "　CO2排出量は、平均の" + ratio +"倍です。"};;
-lang.co2compare06='平均よりもだいぶ少ないです。とてもすてきな暮らしです。';
-lang.co2compare08='平均よりも少なめです。すてきな暮らしです。';
-lang.co2compare10='平均と同じ程度です。';
-lang.co2compare12='平均よりもやや多めです。改善により光熱費が下がる余地は大きそうです。';
-lang.co2compare14='平均よりも多めです。改善により光熱費が下がる余地は大きそうです。';
-lang.rankcomment=function(same,youcount,rank) {return same +"が100" + youcount + "あったとすると、少ないほうから" +   rank+ "番目です。<br>"};;
-lang.itemize='内訳';
-lang.itemname='分野';
-lang.percent='割合(%)';
-lang.measure='対策';
-lang.merit='お得';
-lang.select='選択';
-lang.itemizecomment=function(main3,sum) {return main3+"の割合が大きく、この3分野で" + sum+"%を占めます。こうした大きい分野の対策が効果的です。"};;
-lang.effectivemeasures='効果的な対策';
-lang.comment_combined_reduce=function(percent,fee,co2) {return co2==0 ?  "対策をすることでCO2排出をへらすことができます。" : "　組み合わせると" + percent+"%、年間" + ( hidePrice != 1  ? fee +"円の光熱費と、":"") + co2+"kgのCO2が削減できます。" };;
-lang.titlemessage=function(title) {return  title+"取り組みが効果的です。"};;
-lang.co2reduction=function(co2) {return "年間" + co2+"kgのCO2を減らすことができます。"};;
-lang.reducepercent=function(name,percent) {return "これは" + name+"の" +percent+"%を減らすことに相当します。"};;
-lang.co2minus='CO2を排出しない生活が達成できます。';
-lang.error=' ※詳細の記入がないため概算です。';
-lang.feereduction=function(fee) {return "年間約" + fee+"円お得な取り組みです。"};;
-lang.feenochange='光熱費等の変化はありません。';
-lang.initialcost=function(price,lifetime,load) {return "新たに購入するために、約" + price+"円（参考価格）かかり、" + lifetime+"年の寿命で割ると、年間約"+ load+"円の負担になります。"};;
-lang.payback=function(change,totalchange,down) {return "一方、光熱費が毎年約" + change+ "円安くなるため、トータルでは年間約" + totalchange +(down?"円お得となります。":"円の負担ですみます。" )};;
-lang.payback1month='1ヶ月以内に元をとれます。';
-lang.paybackmonth=function(month) {return "約" + month+"ヶ月で元をとれます。"};;
-lang.paybackyear=function(year) {return "約" + year+"年で元をとれます。"};;
-lang.paybacknever='なお、製品の寿命までに、光熱費削減額で元をとることはできません。';
-lang.notinstallfee=function(fee) {return "光熱費は年間約" + fee+"円安くなります。"};;
-lang.monthlytitle='月ごとの光熱費推計';
-lang.month='月';
-lang.energy='エネルギー';
-lang.button_clear='クリア';
-lang.button_savenew='新規保存';
-lang.button_save='保存';
-lang.button_open='開く';
-lang.button_close='閉じる';
-lang.button_showall='全て表示';
-lang.add='追加';
-lang.button_menu='メニュー';
-lang.button_back_toppage='最初のページに戻る';
-lang.button_back='戻る';
-lang.button_prev='前へ';
-lang.button_next='次へ';
-lang.button_top='トップ';
-lang.button_input='現状記入';
-lang.button_queslist='質問一覧';
-lang.button_diagnosis='診断画面';
-lang.button_measures='対策検討';
-lang.button_selectcategory='評価分野設定';
-lang.button_calcresult='計算結果';
-lang.button_about='解説';
-lang.button_fullversion='全機能版';
-lang.clear_confirm='一覧モード';
-lang.button_co2emission='CO2排出量';
-lang.button_firstenergy='一次エネルギー量';
-lang.button_energyfee='光熱費';
-lang.home_button_intro1='　あなたの家庭でのエネルギー機器や、その使い方に応じて、有効な省エネ対策を提案します。家庭でのエネルギーの使い方について20問程度の質問があります。答えられる質問だけで結構ですので、回答いただくと、あなたの家庭にあった対策を提案することができます。';
-lang.home_button_intro2='　入力された情報については、この端末を利用するあなただけが閲覧でき、サーバーには蓄積されません。';
-lang.home_button_startdiagnosis='診断をはじめる';
-lang.home_button_about='この診断について';
-lang.home_button_result='結果をみる';
-lang.home_button_retry='回答しなおす';
-lang.home_button_average='平均比較';
-lang.home_button_monthly='月変化';
-lang.home_button_measure='有効な対策';
-lang.home_button_resultmessage='　平均との比較をグラフにしました。「有効な対策」を実行した場合の効果が中央のグラフに表示されます。';
-lang.home_button_measuremessage='　有効な対策の一覧です。「選択」にチェックをすると、効果がグラフで表示されます。';
-lang.home_button_pagemessage='　分野を指定して詳しく回答しなおすことができます。「追加」で部屋や機器を追加できます。';
-lang.home_focus_title_after='　一覧モード';
-lang.intro1='ようこそ新省エネ診断ソフトへ。いまのエネルギーの使い方を入力することで、有効な省エネ対策を計算して提案できます。';
-lang.intro2='わかる範囲で、今のエネルギーの使い方を選んでください。おおよそでも構いませんし、わからない質問は飛ばしてください。';
-lang.intro3='入力に応じた分析結果が随時表示されます。';
-lang.intro4='CO2排出量を用途別に分析した推計結果です。左があなたの現状です。右が比較として、同様の家庭（事業者）を示しています。中央は、対策を選択したときの削減成果が示されます。';
-lang.intro5='月別の光熱費をグラフにしています。';
-lang.intro6='有効な省エネ対策が随時表示されます。タイトルをクリックすると、詳しく解説されます。お得の★は、購入費用があっても元を取れる対策です。右の列をクリックして選択すると、対策をした場合の成果が、中央のグラフに反映されます。';
-lang.intro7='ブラウザに入力情報を保存しておくことができます。';
-lang.intro8='この画面は20項目程度の限られた質問だけですが、詳しく診断することもできます。ではさっそく[Done]を押して診断をはじめてください。';
-lang.home_easy_title='快適生活のための簡単エコチェック';
-lang.home_easy_step1='質問';
-lang.home_easy_step2='比較';
-lang.home_easy_step3='特徴';
-lang.home_easy_step4='対策';
-lang.home_easy_toptitle='家の光熱費を安くしてみませんか';
-lang.home_easy_top1='　日本では「省エネ」が誤解されています。決して「がまんする」ものではなく、より生活を豊かにするものです。光熱費も安くなり、生活が快適になり、それで未来の子どもたちのためにもなります。';
-lang.home_easy_top2='　かんたんな質問で、あなたの生活にあった対策を示します。3分間でできるエコチェックしてみてください。';
-lang.home_easy_top3sm='※ご利用は無料です。<br>※名前やメールアドレスなど、あなたを特定する情報の入力は必要ありません。また端末にダウンロードして動作するため、入力した値を利用端末以外に送ることはありません。<br>※このページは利用状況を把握するためにGoogle Analiticsを使用しています。';
-lang.home_easy_top_button_start='診断をはじめる';
-lang.home_easy_top_button_about='　解説　';
-lang.home_easy_p5title='この質問にお答えください';
-lang.home_easy_p5_1='　おおよそあてはまる選択肢を選んでください。わからない場合には、回答しなくても構いません。';
-lang.home_easy_p5_button_next='結果をみる';
-lang.home_easy_p2title='平均世帯とくらべて';
-lang.home_easy_p2_button_next='大きな原因を明らかにします';
-lang.home_easy_p3title='あなたの生活の特徴';
-lang.home_easy_p3_1='　CO2がどこから出ているのか分析した結果です。左があなた、右は条件があなたに似た家庭の標準値を示しています。';
-lang.home_easy_p3_button_next='おすすめの対策はこちら';
-lang.home_easy_p4title_pre='　';
-lang.home_easy_p4title_after='つのおすすめ対策';
-lang.home_easy_p4_button_next='一番おすすめの対策';
-lang.home_easy_p4_1='　あなたの家庭に合わせた、おすすめの省エネ対策です。タイトルをクリックすると、詳しく解説されます。お得の★マークは、購入費用があっても元を取れる対策です。';
-lang.home_easy_p4_2='　これは概算です。詳しい診断で、よりあなたにあった提案をすることもできます。';
-lang.home_easy_p4_button_next2='さらに詳しい診断はこちらからできます';
-lang.home_easy_p4_button_next3='家電製品の買い換えを考えているかた';
-lang.home_easy_measure_show=function(num) {return num + "番目におすすめを表示"};;
-lang.home_maintenance_message='　あなたの選択した対策は以下のとおりです。取り組めていますか？';
-lang.home_maintenance_list='選択した対策';
-lang.home_maintenance_selected='この対策を選択しました';
-lang.home_action_title='低炭素生活のための簡単エコチェック';
-lang.home_action_step1='質問';
-lang.home_action_step2='評価';
-lang.home_action_step3='対策';
-lang.home_action_toptitle='めざせ低炭素家庭';
-lang.home_action_top1='削減ができます';
-lang.home_action_top2='かんたんな方法で';
-lang.home_action_axis1='持続可能性';
-lang.home_action_axis2='省エネ機器';
-lang.home_action_axis3='省エネ行動';
-lang.home_action_label1='すばらしい！';
-lang.home_action_label2='まあまあよい';
-lang.home_action_label3='ちょっと残念';
-lang.home_action_good_point='良い点';
-lang.home_action_bad_point='改善点';
-lang.home_list_message='家庭で有効な対策です。この中からあなたにあった対策を厳選します。';
-lang.younow='現状';
-lang.youafter='対策後';
-lang.average='平均';
-lang.compare='比較';
+lang.monthunit='mon';
+lang.yearunit='year';
+lang.startPageName='Overall (simple)';
+lang.header_attension='(There is no guarantee of the suggested numerical value because it is an operation model.You can develop according to your needs.)';
+lang.dataClear='Delete all input data. Are you OK.?';
+lang.savetobrowser='It saved in the browser.';
+lang.savedataisshown='The saved values ​​are as follows.';
+lang.QuestionNumber=function(numques, nowques) {return  "(" + nowques + "th in " + numques + " questions）"};;
+lang.youcall='you';
+lang.youcount='Household';
+lang.totalhome='Whole household';
+lang.comparehome=function(target) {return "The same household size"+target+"peoplle"};;
+lang.rankin100=function(count) {return "The rank is " + count +" in the 100."};;
+lang.rankcall='';
+lang.co2ratio=function(ratio) {return "　CO2 emission is" + ratio +"times to the average"};;
+lang.co2compare06='It is much less than average. It is a very nice life.';
+lang.co2compare08='It is less than average. It is a wonderful life.';
+lang.co2compare10='It is about the same level as the average.';
+lang.co2compare12='It is somewhat higher than the average. There seems to be plenty of room for reduction in utility costs due to improvement.';
+lang.co2compare14='It is larger than the average. There seems to be plenty of room for reduction in utility costs due to improvement.';
+lang.rankcomment=function(same,youcount,rank) {return "in 100" + youcount + " same to your home、your rank is #" +   youcount+ "<br>"};;
+lang.itemize='Breakdown';
+lang.itemname='Field';
+lang.percent='Percentage (%)';
+lang.measure='Measures';
+lang.merit='Good value';
+lang.select='Choice';
+lang.itemizecomment=function(main3,sum) {return main3+"is big source in your home,  and top three items emit" + sum+"% of CO2 form your house.。hese large field measures are effective."};;
+lang.effectivemeasures='Effective measures';
+lang.comment_combined_reduce=function(percent,fee,co2) {return "　You can reduce  " + percent+"%, " + ( hidePrice != 1  ? fee +"yen of energy cost and ":"") + co2+"kg of CO2 emittion annualy.  If you are already working on it, this means that you are doing an eco-life that will only produce these results."};;
+lang.titlemessage=function(title) {return  title+" is effective."};;
+lang.co2reduction=function(co2) {return "You can reduce " + co2+"kg of CO2 emission."};;
+lang.reducepercent=function(name,percent) {return "With these measures you can reduce " +percent+"% from " + name};;
+lang.co2minus='Living without CO2 emissions can be achieved.';
+lang.error=' * It is rough estimate because there is not detailed entry.';
+lang.feereduction=function(fee) {return "You can save" + fee+"yen per year."};;
+lang.feenochange='There is no change in utility expenses etc.';
+lang.initialcost=function(price,lifetime,load) {return "To purchase newly, it costs about" + price+"yen (reference price), devided " + lifetime+"year of life, your total cost will be"+ load+"yen per year."};;
+lang.payback=function(change,totalchange,down) {return "On the other hand, the utility cost will be saved for " + change+ "yen per year, so the total burden will be" + totalchange +(down?"yen you can save every year in total.":"yen per year." )};;
+lang.payback1month='You can get back within a month.';
+lang.paybackmonth=function(month) {return "You can get back in" + month+"months"};;
+lang.paybackyear=function(year) {return "You can get back on about" + year+"years."};;
+lang.paybacknever='In addition, it is impossible to take the original value with the utility cost reduction amount by the products lifetime.';
+lang.notinstallfee=function(fee) {return "The utility cost will be" + fee+"yen cheaper."};;
+lang.monthlytitle='Estimated utility cost per month';
+lang.month='Month';
+lang.energy='energy';
+lang.button_clear='Clear';
+lang.button_savenew='New storage';
+lang.button_save='Save';
+lang.button_open='open';
+lang.button_close='close';
+lang.button_showall='Show all';
+lang.add='add';
+lang.button_menu='menu';
+lang.button_back_toppage='Back to the first page';
+lang.button_back='Return';
+lang.button_prev='Forward';
+lang.button_next='next';
+lang.button_top='Top';
+lang.button_input='Entry';
+lang.button_queslist='Question List';
+lang.button_diagnosis='Diagnosis page';
+lang.button_measures='Measure';
+lang.button_selectcategory='Evaluation field';
+lang.button_calcresult='Calculation result';
+lang.button_about='Commentary';
+lang.button_fullversion='Full function version';
+lang.clear_confirm='List mode';
+lang.button_co2emission='CO2 emissions';
+lang.button_firstenergy='Primary energy';
+lang.button_energyfee='Utility costs';
+lang.home_button_intro1='We will propose effective energy saving measures according to energy equipment in your home and how to use it. There are about 20 questions about how to use energy at home. It is enough to answer questions, so if you answer, you can suggest measures that were appropriate for your home.';
+lang.home_button_intro2='The information you enter can only be viewed by you using this terminal, it will not accumulate on the server.';
+lang.home_button_startdiagnosis='Start diagnosis';
+lang.home_button_about='About this diagnosis';
+lang.home_button_result='View the results';
+lang.home_button_retry='Respond again';
+lang.home_button_average='Average comparison';
+lang.home_button_monthly='Monthly change';
+lang.home_button_measure='Effective measures';
+lang.home_button_resultmessage='We compare the average with a graph. The effect when executing \'effective measures\' is displayed in the middle graph.';
+lang.home_button_measuremessage='A list of effective countermeasures. If you select the effect will be displayed in the graph.';
+lang.home_button_pagemessage='You can respond in detail by specifying the field. You can add rooms and equipment with Add.';
+lang.home_focus_title_after='List mode';
+lang.intro1='Welcome to new energy saving diagnosis software (D6). By inputting how to use energy now, you can calculate and propose effective energy saving measures.';
+lang.intro2='As far as you can understand, please choose how to use the current energy. I do not mind if I do not care about it, skip the question I do not understand.';
+lang.intro3='Analysis results according to input are displayed at any time.';
+lang.intro4='It is an estimation result that analyzed CO2 emissions by purpose. The left is your current situation. The right shows a similar family (business operator) as a comparison. The center shows reduction results when measures are selected.';
+lang.intro5='I am charting the utility bill by month.';
+lang.intro6='Effective energy saving measures are displayed from time to time. Click on the title to explain in detail. A profitable ★ is a measure that can take the original even if there is a purchase cost. If you click on the right column and select it, the result in the case of countermeasures will be reflected in the middle graph.';
+lang.intro7='You can save the input information in the browser.';
+lang.intro8='This screen is limited to about 20 items, but you can also do a detailed diagnosis. Then press [Done] immediately and start diagnosis.';
+lang.home_easy_title='Eco-check easy for comfortable living';
+lang.home_easy_step1='A question';
+lang.home_easy_step2='Comparison';
+lang.home_easy_step3='Characteristic';
+lang.home_easy_step4='Measures';
+lang.home_easy_toptitle='Why do not you try to lower the houses utility bill?';
+lang.home_easy_top1=' \'Energy saving\' is misunderstood in Japan. It is not something to \'endure\' but to enrich your life. Costs for light and heat are cheap, life becomes comfortable, and it will also be for the future children.';
+lang.home_easy_top2='Six questions will tell you what measures were right for your life. Please try eco-check in 3 minutes.';
+lang.home_easy_top3sm='* It is completely free. You do not need to enter information to identify you, such as name or email address. Since this diagnostic software is executed by downloading the calculation logic itself to the terminal, the entered value is never sent to other than the user terminal.This page uses Google Analitics to understand usage situation.';
+lang.home_easy_top_button_start='Start diagnosis';
+lang.home_easy_top_button_about='Commentary';
+lang.home_easy_p5title='Please answer this questions';
+lang.home_easy_p5_1='Please choose the option that roughly applies. If you do not understand, you do not have to answer.';
+lang.home_easy_p5_button_next='View results';
+lang.home_easy_p2title='Compared to average households';
+lang.home_easy_p2_button_next='I will clarify the big cause';
+lang.home_easy_p3title='Characteristics of your life';
+lang.home_easy_p3_1='It is the result of analyzing where CO2 comes out. The left shows your house , the right shows the standard value of the home whose condition resembles you.';
+lang.home_easy_p3_button_next='Recommended measures here';
+lang.home_easy_p4title_pre='';
+lang.home_easy_p4title_after=' Recommended Measures';
+lang.home_easy_p4_button_next='The most recommended measures';
+lang.home_easy_p4_1='It is a recommended energy saving measure tailored to your home. Click on the title to explain in detail. The ★ mark of profit is a measure that can take the original even if there is purchase cost.';
+lang.home_easy_p4_2='This is rough estimate. With detailed diagnosis, you can make suggestions that more suited you.';
+lang.home_easy_p4_button_next2='More detailed diagnosis can be done from here';
+lang.home_easy_p4_button_next3='Thinking of replacing home appliances';
+lang.home_easy_measure_show=function(num) {return "Show recommendations at "+ num + "th"};;
+lang.home_maintenance_message='The measures you have selected are as follows. Are you working on it?';
+lang.home_maintenance_list='Selected measures';
+lang.home_maintenance_selected='I have selected this countermeasure';
+lang.home_action_title='Easy Check for Low Carbon House';
+lang.home_action_step1='Questions';
+lang.home_action_step2='Evaluation';
+lang.home_action_step3='Measures';
+lang.home_action_toptitle='Let\'s Change to Low Carbon House';
+lang.home_action_top1='You can easily find confortable ideas to be low carbon.';
+lang.home_action_top2='';
+lang.home_action_axis1='Sustainability';
+lang.home_action_axis2='Energy Efficiency';
+lang.home_action_axis3='Saving Energy';
+lang.home_action_label1='Excellent';
+lang.home_action_label2='Good';
+lang.home_action_label3='Bad';
+lang.home_action_good_point='Good Point';
+lang.home_action_bad_point='Bad Point';
+lang.home_list_message='Choose the countermeasure suitable for you from among these';
+lang.younow='Current status';
+lang.youafter='After measures';
+lang.average='average';
+lang.compare='Comparison';
 lang.comparetoaverage='';
-lang.co2emission='CO2排出量';
-lang.co2reductiontitle='CO2削減効果';
-lang.fee='光熱費';
-lang.feereductiontitle='光熱費削減';
-lang.initialcosttitle='初期投資額';
-lang.loadperyear='年間負担額';
-lang.primaryenergy='一次エネルギー消費量';
-lang.other='その他';
-lang.office_title='事業所簡易省エネ診断';
-lang.officecall='御社';
-lang.officecount='事業所';
-lang.totaloffice='事業所全体';
-lang.officenow='現状';
-lang.compareoffice=function(target) {return "同じ規模の" + target};;
-lang.button_demand='デマンド';
-lang.button_end='やめる';
-lang.button_agree='設定する';
-lang.button_commit='実行します';
+lang.co2emission='CO2 emissions';
+lang.co2reductiontitle='CO2 reduction effect';
+lang.fee='Utility costs';
+lang.feereductiontitle='Reduction of utility cost';
+lang.initialcosttitle='Initial investment amount';
+lang.loadperyear='Annual burden amount';
+lang.primaryenergy='Primary energy consumption';
+lang.ohter='Other';
+lang.office_title='Easy energy saving diagnosis at business establishments';
+lang.officecall='Your company';
+lang.officecount='Office';
+lang.totaloffice='Whole establishment';
+lang.officenow='Current status';
+lang.compareoffice=function(target) {return "On the same scale" + target};;
+lang.button_demand='Demand';
+lang.co2unitperyear='kg/year';
+lang.co2unitpermonth='kg/mon';
+lang.feeunitperyear='Yen/year';
+lang.feeunitpermonth='Yen/mon';
+lang.energyunitperyear='GJ/year';
+lang.energyunitpermonth='GJ/mon';
 </script>
-
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js" type="text/javascript"></script>
 	<script src="view/js/leanModal/jquery.leanModal.min.js" type="text/javascript"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js" type="text/javascript"></script>
@@ -323,8 +340,8 @@ lang.button_commit='実行します';
 	<script src="view/graph.js" type="text/javascript"></script>
 	<script src="https://d3js.org/d3.v6.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.min.js"></script>
-	<script src='dist_sample/d6home_core.min.js' type='text/javascript'></script>
-	<script src='dist_sample/d6home_JP.min.js' type='text/javascript'></script>
+	<!--[if lte IE 10]><script>alert("Sorry, this page does not work under IE8, and too slow under IE10.\n Please use IE11 up, chrome, Edge, Firefox or safari.");</script><![endif]--><script src='./view_JP_en/JP_home_0.js' type='text/javascript'></script>
+<script src='dist/d6home_core.min.js' type='text/javascript'></script><script src='dist/d6home_JP_en.min.js' type='text/javascript'></script>
 
 	<script>
 	window.onload = function(){
@@ -332,6 +349,7 @@ lang.button_commit='実行します';
 		$('#divco2').hide();
 	};
 	</script>
+	<script>paramdata='';</script>
 	<script src="view/view_base/onclick-base.js" type="text/javascript"></script>
 
 </body>
