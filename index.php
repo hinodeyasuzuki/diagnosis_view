@@ -307,66 +307,24 @@ if ( $data ) {
 //templates ==============================================================
 
 //templates depend on displayMode =====================================================
-switch( $viewMode ) {
-	case 0:
-		//PC full diagnosis
-		include "view/view_base/template-base.html";
-		break;
-
-	case 1:
-		//smart phone
-		include "view/view_button/template-button.html";
-		break;
-
-	case 2:
-		//focus diagnosis in one page
-		include "view/view_focus/template-focus.html";
-		break;
-
-	case 3:
-		// easy , single question
-		include "view/view_easy/template-easy.html";
-		break;
-
-	case 4:
-		//about
-		include "view/view_about/template-about.html";
-		break;
-		
-	case 5:
-		//maintenance
-		include "view/view_maintenance/template-maintenance.html";
-		break;
-		
-	case 6:
-		//action
-		include "view/view_action/template-action.html";
-		break;
-		
-	case 7:
-		//lifegame
-		include "view/view_lifegame/template-lifegame.html";
-		break;
-		
-	case 8:
-		//uchieco
-		include "view/view_uchieco/template-uchieco.html";
-		break;
-		
-	case 9:
-		//develop
-		include "view/view_develop/template-develop.html";
-		break;
-
-	case 99:
-		//measure list
-		include "view/view_list/template-list.html";
-		break;
-
-	default:
-		//about
-		include "view/view_about/template-about.html";
-		break;
+$viewModeList = array(
+	0=>"base",		//0:PC full diagnosis
+	1=>"button",	//1:smart phone
+	2=>"focus",	//2:focus diagnosis in one page
+	3=>"easy",		//3:easy , single question
+	4=>"about",	//4:about
+	5=>"maintenance",	//5:maintenance
+	6=>"actin",	//6:action
+	7=>"lifegame",	//lifegame
+	8=>"uchieco",	//uchieco
+	9=>"develop",	//develop
+	// 1-30,90-99 reserved for common
+	99=>"list",	//measure list
+);
+if ( @$viewModeList[$viewMode] ){
+	include "view/view_".$viewModeList[$viewMode]."/template.html";
+} else {
+	include "view/view_about/template";
 }
 
 

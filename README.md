@@ -1,14 +1,17 @@
 # diganosis_view home eco diagnosis Ver6.rev.2 view templates
 
-家庭の省エネ・地球温暖化対策診断ソフトの画面・操作部分です。ロジック(d62)と合わせて活用してください。
+家庭の省エネ・地球温暖化対策診断ソフトの画面・操作部分です。ロジック(d62 / d6 ver2)と合わせて活用してください。
 
 This program is view logic for home eco diagnosis system. If you want to change logic, adjust d62 souce code.
 
-なお、ロジックのd62のコンパイル結果（日本語）を dist/に配置しており、実際の診断の動作テストができます。d62で開発した場合には、コンパイル済みjsファイルを、distに設置して使ってください。
+なお、ロジックであるd62の日本語版コンパイル結果を dist/に配置しており、実際の診断の動作テストができます。d62で独自に開発した場合には、コンパイル済みjsファイルを、distに設置します。
 
 The sample logic on Japanese is set on /dist/ directory. You can test the view to run index.php.
 
-PHPについては、言語や、画面の種類を構成するために使用しているのみで、診断実行中は画面遷移を行いません。このため、パラメータを設定して実行させた状態で、ソースコードだけ抜き出してhtmlファイルを作成することで、phpなしで動作します。
+PHPは、言語や画面の種類を構成するために使用しているのみで、診断実行中の画面遷移等の処理は担っていません。このため、パラメータを設定して実行させた状態でソースコードだけ抜き出してhtmlファイルを作成することで、phpなしで動作させることができます。
+
+PHP is only used to configure the language and screen type, and is not responsible for processing such as screen transitions during execution the diagnosis. Therefore, by extracting only the source code and creating an html file with the parameters set and executed, it can be operated without php.
+
 
 ## Demo
 
@@ -35,6 +38,26 @@ https://www.hinodeya-ecolife.com/diagnosis/?v=4&lang=en　information about diag
 you can set parameter v to change design of visual.
 
 also set lang to change area/language. now you can use ja, en, zh, fr, ko, vi.
+
+
+## how to adjust and fit for your use
+
+### 1.find view type and copy
+
+用途にあった基本となるビュータイプを選びます。ビュータイプをコピーして新しいビューをたとえば、view_hoge として登録します。これを index.phpのビューリストに登録します。30番以下、90番以上は予約番号なので、それ以外のID番号で登録してください。
+
+### 2.find language
+
+使用する言語（翻訳設定）を確認します。view_[言語] フォルダの基本として利用するビュー番号の [言語]_home_[ビュー番号].js ファイルをコピーして使用します。これを言語設定ファイルとして使用します。
+
+
+### 3.select question and measures
+
+提示する対策と、それにあわせて質問も制限します。これは言語設定ファイルで設定ができます。初期設定と同じ内容の対策であれば、表現を変えることもできます。
+
+### 4.add new measres
+
+新規の対策を提示するためには、EXCELでの対策の追加と、そのロジックの記述が必要になります。d62で作業をします。
 
 ## folder and files
 index.php   access file in oder to manage develop/release, language, etc.
