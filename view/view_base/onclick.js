@@ -9,7 +9,7 @@
  */
 
 // call startCalc in main.js , in order to execute D6.workercalc in d6facade.js
-// result is dealed in main.js
+// result is treated in main.js
 
 //inchange(id) -----------------------------------------------
 // 		set input value and calculate

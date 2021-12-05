@@ -59,6 +59,26 @@ also set lang to change area/language. now you can use ja, en, zh, fr, ko, vi.
 
 新規の対策を提示するためには、EXCELでの対策の追加と、そのロジックの記述が必要になります。d62で作業をします。
 
+### 5.setting
+
+- webworkerを使うか、関数呼び出しとするかは、main.js で設定できる。
+
+
+### 6.parameters and auto display update
+
+defined div-tag id.
+
+- #header : header name
+- #tab : 
+- #tabcontents : 
+- #cons : showItemizeTable(res.itemize) in main.js
+- #average : showAverageTable(res.average) in main.js
+- #measure : showMeasureTable(res.measure)
+- #graph : graphItemize(res.itemize_graph)
+- #graphMonthly : graphMonthly(res.monthly)
+
+
+
 ## folder and files
 index.php   access file in oder to manage develop/release, language, etc.
 
@@ -91,12 +111,5 @@ now prepareing EN, FR, KO, CN, VI language and area.
 Copyright 2011－2020（C） Yasufumi Suzuki, Hinodeya Insititute for Ecolife co.Ltd.
 
 Released under the MIT license
-
-
-
-
-
-
-
 
 .

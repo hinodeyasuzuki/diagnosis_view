@@ -8,23 +8,23 @@
 //
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $languageMode; ?>">
+<html lang="<?= $languageMode; ?>">
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=yes">
 	<link href="view/common.css" rel="stylesheet" type="text/css" />
-	<?php echo $alternate ?>
-	<title><?php echo $title . $lang['home_easy_top_button_about'];?></title>
+	<?= $alternate ?>
+	<title><?= $title . $lang['home_easy_top_button_about'];?></title>
 </head>
 
 <body>
 	<div class="contents">
 
 		<div id="header">
-			<h1><?php echo $title . $lang['home_easy_top_button_about'];?></h1>
+			<h1><?= $title . $lang['home_easy_top_button_about'];?></h1>
 			<div align="right"><button class="button"
-					onclick="window.open('about:blank','_self').close();"><?php echo $lang['button_close']; ?></button>
+					onclick="window.open('about:blank','_self').close();"><?= $lang['button_close']; ?></button>
 			</div>
 		</div>
 
@@ -32,18 +32,18 @@
 		<div id="about">
 			<?php include $lang["viewfolder"]. "/about.html"; ?>
 			<div align="right"><button class="button"
-					onclick="window.open('about:blank','_self').close()"><?php echo $lang['button_close']; ?></button>
+					onclick="window.open('about:blank','_self').close()"><?= $lang['button_close']; ?></button>
 			</div>
 		</div>
 
 		<div id="footer">
 			<p>
-				<?php echo $opendate;?>
+				<?= $opendate;?>
 				<a href="https://www.hinodeya-ecolife.com/">Hinodeya Institute for Ecolife co.ltd.</a>
 			</p>
 		</div>
 
-		<?php echo $jsgoogle_analytics; ?>
+		<?= $jsgoogle_analytics; ?>
 
 </body>
 

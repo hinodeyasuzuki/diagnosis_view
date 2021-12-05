@@ -10,13 +10,13 @@
 //
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $languageMode; ?>">
+<html lang="<?= $languageMode; ?>">
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link href="view/common.css" rel="stylesheet" type="text/css" />
 	<link href="view/view_develop/layout.css" rel="stylesheet" type="text/css" />
-	<title><?php echo $title;?></title>
+	<title><?= $title;?></title>
 </head>
 
 <body>
@@ -24,13 +24,13 @@
 	<div class="contents">
 
 		<div id="header">
-			<h1><?php echo $title;?></h1>
+			<h1><?= $title;?></h1>
 
 			<div id="header_attension">
 				<p>
-					<?php echo $opendate;?>
+					<?= $opendate;?>
 					<a href="https://www.hinodeya-ecolife.com/">Hinodeya Institute for Ecolife co.ltd.</a>
-					<?php echo $lang['header_attension'];?>
+					<?= $lang['header_attension'];?>
 				</p>
 			</div>
 		</div>

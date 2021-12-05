@@ -10,49 +10,49 @@
 //
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $languageMode; ?>">
+<html lang="<?= $languageMode; ?>">
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link href="view/common.css" rel="stylesheet" type="text/css" />
 	<link href="view/view_focus/layout.css" rel="stylesheet" type="text/css" />
-	<?php echo $alternate ?>
-	<title><?php echo $title;?></title>
+	<?= $alternate ?>
+	<title><?= $title;?></title>
 
 </head>
 
 <body>
 	<div id="leanModalDialog">
-		<input type="button" class="modal_close" value="<?php echo $lang['button_back'];?>">
+		<input type="button" class="modal_close" value="<?= $lang['button_back'];?>">
 		<div id="modal-contents"></div>
 	</div>
 
 	<div class="contents">
 
 		<div id="header">
-			<div data-intro="<?php echo $lang['intro1'];?>" data-step="1">
-				<h1><?php echo $title;?>　<?php echo $lang['home_focus_title_after'];?></h1>
+			<div data-intro="<?= $lang['intro1'];?>" data-step="1">
+				<h1><?= $title;?>　<?= $lang['home_focus_title_after'];?></h1>
 			</div>
 		</div>
 
 		<div id="headerMenu">
 			<!--<button class="button inmode selected" id="m2"
-				onclick="modeChange('m2');"><?php echo $lang['button_diagnosis'];?></button>-->
-			<button class="button" id="btnsave" onclick="dataSave();" data-intro="<?php echo $lang['intro7'];?>"
-				data-step="7"><?php echo $lang['button_save'];?></button>
-			<button class="button" id="btnclear" onclick="dataClear();"><?php echo $lang['button_clear'];?></button>
+				onclick="modeChange('m2');"><?= $lang['button_diagnosis'];?></button>-->
+			<button class="button" id="btnsave" onclick="dataSave();" data-intro="<?= $lang['intro7'];?>"
+				data-step="7"><?= $lang['button_save'];?></button>
+			<button class="button" id="btnclear" onclick="dataClear();"><?= $lang['button_clear'];?></button>
 			&nbsp;
-			<a class="button inmode" href="./?lang=<?php echo $languageMode; ?>&v=4"
-				target="_blank"><?php echo $lang['button_about'];?></a>
-			<button class="button inmode" onclick="saveandgo();" data-intro="<?php echo $lang['intro8'];?>"
-				data-step="8"><?php echo $lang['button_fullversion'];?></button>
+			<a class="button inmode" href="./?lang=<?= $languageMode; ?>&v=4"
+				target="_blank"><?= $lang['button_about'];?></a>
+			<button class="button inmode" onclick="saveandgo();" data-intro="<?= $lang['intro8'];?>"
+				data-step="8"><?= $lang['button_fullversion'];?></button>
 		</div>
 
 		<div id="header_attension">
 			<p>
-				<?php echo $opendate;?>
+				<?= $opendate;?>
 				<a href="https://www.hinodeya-ecolife.com">Hinodeya Institute for Ecolife co.ltd.</a>
-				<?php echo $lang['header_attension'];?>
+				<?= $lang['header_attension'];?>
 			</p>
 		</div>
 
@@ -61,22 +61,22 @@
 		</div>
 
 		<div id="divco2">
-			<div class="leftmenu" data-intro="<?php echo $lang['intro2'];?>" data-step="2" data-position="right">
+			<div class="leftmenu" data-intro="<?= $lang['intro2'];?>" data-step="2" data-position="right">
 				<ul id='tabcontents'></ul>
 			</div>
 
-			<div class="result" data-intro="<?php echo $lang['intro3'];?>" data-step="3" data-position="right">
-				<div id="graph" data-intro="<?php echo $lang['intro4'];?>" data-step="4"></div>
+			<div class="result" data-intro="<?= $lang['intro3'];?>" data-step="3" data-position="right">
+				<div id="graph" data-intro="<?= $lang['intro4'];?>" data-step="4"></div>
 				<p id="graphcomment"></p>
 				<div style="padding:20px;"></div>
-				<div id="graphMonthly" data-intro="<?php echo $lang['intro5'];?>" data-step="5" data-position="top">
+				<div id="graphMonthly" data-intro="<?= $lang['intro5'];?>" data-step="5" data-position="top">
 				</div>
 			</div>
 
 			<div class="mesmenu">
-				<div id="measure" data-intro="<?php echo $lang['intro6'];?>" data-step="6" data-position="left"></div>
+				<div id="measure" data-intro="<?= $lang['intro6'];?>" data-step="6" data-position="left"></div>
 				<div style="text-align:right;">
-					<button style='color:blue;' onclick="over15show();">[<?php echo $lang['button_showall'];?>]</button>
+					<button style='color:blue;' onclick="over15show();">[<?= $lang['button_showall'];?>]</button>
 				</div>
 				<p id="totalReduceComment"></p>
 			</div>

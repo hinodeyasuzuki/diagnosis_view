@@ -8,28 +8,28 @@
 //
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $languageMode; ?>">
+<html lang="<?= $languageMode; ?>">
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="target-densitydpi=device-dpi, width=320, initial-scale=1.0, user-scalable=yes">
 	<link href="view/common.css" rel="stylesheet" type="text/css" />
 	<link href="view/view_lifegame/layout.css" rel="stylesheet" type="text/css" />
-	<?php echo $alternate ?>
-	<title><?php echo $lang["home_lifegame_title"];?> - <?php echo $title;?></title>
+	<?= $alternate ?>
+	<title><?= $lang["home_lifegame_title"];?> - <?= $title;?></title>
 
 </head>
 
 <body>
 	<div id="leanModalDialog" style="float:left;">
-		<input type="button" class="modal_close" value="<?php echo $lang['button_back'];?>">
+		<input type="button" class="modal_close" value="<?= $lang['button_back'];?>">
 		<div id="modal-contents"></div>
 	</div>
 
 	<div class="contents">
 
 		<div id="header">
-			<h1><?php echo $lang["home_lifegame_title"];?></h1>
+			<h1><?= $lang["home_lifegame_title"];?></h1>
 		</div>
 
 		<div class="preloader">
@@ -38,87 +38,87 @@
 
 
 		<div class="page" id="p1" contents="start page">
-			<h2><?php echo $lang['home_lifegame_toptitle'];?></h2>
-			<p><?php echo $lang['home_lifegame_top1'];?></p>
+			<h2><?= $lang['home_lifegame_toptitle'];?></h2>
+			<p><?= $lang['home_lifegame_top1'];?></p>
 			<div class="center">
-				<button class="next button large" onclick="modeChange('m2');"><?php echo $lang['button_next'];?></button>
+				<button class="next button large" onclick="modeChange('m2');"><?= $lang['button_next'];?></button>
 			</div>
 		</div>
 
 		<div class="page" id="p2" style="display:none">
-			<h2><?php echo $lang['home_lifegame_toptitle'];?></h2>
-			<p><?php echo $lang['home_lifegame_top2'];?></p>
+			<h2><?= $lang['home_lifegame_toptitle'];?></h2>
+			<p><?= $lang['home_lifegame_top2'];?></p>
 			<div class="center">
-				<button class="next button large" onclick="modeChange('m3');"><?php echo $lang['button_next'];?></button>
-				<button class="next button large" onclick="modeChange('m99');"><?php echo $lang['button_end'];?></button>
+				<button class="next button large" onclick="modeChange('m3');"><?= $lang['button_next'];?></button>
+				<button class="next button large" onclick="modeChange('m99');"><?= $lang['button_end'];?></button>
 			</div>
 		</div>
 
 		<div class="page" id="p3" style="display:none">
-			<h2><?php echo $lang['home_lifegame_toptitle'];?></h2>
-			<p><?php echo $lang['home_lifegame_top3'];?></p>
-			<?php echo $lang['home_lifegame_top3b'];?>
+			<h2><?= $lang['home_lifegame_toptitle'];?></h2>
+			<p><?= $lang['home_lifegame_top3'];?></p>
+			<?= $lang['home_lifegame_top3b'];?>
 			<div class="center">
 				<button class="next button large"
-					onclick="modeChange('m4');"><?php echo $lang['home_lifegame_button_sel3b'];?></button>
+					onclick="modeChange('m4');"><?= $lang['home_lifegame_button_sel3b'];?></button>
 				<button class="next button large"
-					onclick="modeChange('m90');"><?php echo $lang['home_lifegame_button_sel3a'];?></button>
+					onclick="modeChange('m90');"><?= $lang['home_lifegame_button_sel3a'];?></button>
 			</div>
 		</div>
 
 		<div class="page" id="p4" style="display:none">
-			<h2><?php echo $lang['home_lifegame_toptitle'];?></h2>
-			<p><?php echo $lang['home_lifegame_top4'];?></p>
+			<h2><?= $lang['home_lifegame_toptitle'];?></h2>
+			<p><?= $lang['home_lifegame_top4'];?></p>
 			<div class="center">
-				<button class="next button large" onclick="modeChange('m5');"><?php echo $lang['button_commit'];?></button>
+				<button class="next button large" onclick="modeChange('m5');"><?= $lang['button_commit'];?></button>
 			</div>
 		</div>
 
 		<div class="page" id="p5" style="display:none">
-			<h2><?php echo $lang['home_lifegame_toptitle5'];?></h2>
-			<p><?php echo $lang['home_lifegame_top5'];?></p>
+			<h2><?= $lang['home_lifegame_toptitle5'];?></h2>
+			<p><?= $lang['home_lifegame_top5'];?></p>
 			<div class="center">
-				<button class="next button large" onclick="modeChange('m6');"><?php echo $lang['button_next'];?></button>
+				<button class="next button large" onclick="modeChange('m6');"><?= $lang['button_next'];?></button>
 			</div>
 		</div>
 
 		<div class="page" id="p6" style="display:none">
-			<h2><?php echo $lang['home_lifegame_toptitle6'];?></h2>
-			<p><?php echo $lang['home_lifegame_top6'];?></p>
-			<p><?php echo $lang['home_lifegame_top6b'];?></p>
+			<h2><?= $lang['home_lifegame_toptitle6'];?></h2>
+			<p><?= $lang['home_lifegame_top6'];?></p>
+			<p><?= $lang['home_lifegame_top6b'];?></p>
 			<div class="center">
-				<button class="next button large" onclick="modeChange('m7');"><?php echo $lang['button_next'];?></button>
+				<button class="next button large" onclick="modeChange('m7');"><?= $lang['button_next'];?></button>
 			</div>
 		</div>
 
 		<div class="page" id="p7" style="display:none">
-			<h2><?php echo $lang['home_lifegame_toptitle7'];?></h2>
-			<p><?php echo $lang['home_lifegame_top7'];?></p>
+			<h2><?= $lang['home_lifegame_toptitle7'];?></h2>
+			<p><?= $lang['home_lifegame_top7'];?></p>
 			<div class="center">
-				<button class="next button large" onclick="modeChange('m5');"><?php echo $lang['button_commit'];?></button>
+				<button class="next button large" onclick="modeChange('m5');"><?= $lang['button_commit'];?></button>
 			</div>
 		</div>
 
 		<div class="page" id="p90" style="display:none">
-			<h2><?php echo $lang['home_lifegame_toptitle90'];?></h2>
-			<p><?php echo $lang['home_lifegame_top90'];?></p>
+			<h2><?= $lang['home_lifegame_toptitle90'];?></h2>
+			<p><?= $lang['home_lifegame_top90'];?></p>
 			<div class="center">
-				<button class="next button large" onclick="modeChange('m4');"><?php echo $lang['button_agree'];?></button>
+				<button class="next button large" onclick="modeChange('m4');"><?= $lang['button_agree'];?></button>
 			</div>
 		</div>
 
 		<div class="page" id="p99" style="display:none">
-			<h2><?php echo $lang['home_lifegame_toptitle99'];?></h2>
-			<p><?php echo $lang['home_lifegame_top99'];?></p>
+			<h2><?= $lang['home_lifegame_toptitle99'];?></h2>
+			<p><?= $lang['home_lifegame_top99'];?></p>
 			<div class="center">
 				<button class="next button large"
-					onclick="modeChange('m2');"><?php echo $lang['home_lifegame_button_sel99'];?></button>
+					onclick="modeChange('m2');"><?= $lang['home_lifegame_button_sel99'];?></button>
 			</div>
 		</div>
 
 		<div id="footer">
 			<p>
-				<?php echo $opendate;?>
+				<?= $opendate;?>
 				<a href="https://www.hinodeya-ecolife.com/">Hinodeya Institute for Ecolife co.ltd.</a>
 			</p>
 		</div>
