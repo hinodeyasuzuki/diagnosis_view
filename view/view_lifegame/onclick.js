@@ -76,7 +76,7 @@ modeChange = function(id) {
 	var param = {};
 
 	$(".page").hide();
-	$("#p" + id.substr(1, 10)).show();
+	$("#p" + id.substring(1, 11)).show();
 	$("#top").hide();
 
 	switch (id) {

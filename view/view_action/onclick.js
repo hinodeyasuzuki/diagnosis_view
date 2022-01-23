@@ -111,7 +111,7 @@ function measurenext() {
 		$(".show7").show();
 	}
 
-	param.mid = $("table#itemize tr:nth-child(" + (measuredisp + 1) + ")").prop("id").substr(5, 8);
+	param.mid = $("table#itemize tr:nth-child(" + (measuredisp + 1) + ")").prop("id").substring(5, 13);
 	startCalc("measureadd_comment", param);
 }
 
@@ -125,7 +125,7 @@ var modeChange = function (id) {
 	var param = {};
 
 	$(".page").hide();
-	$("#p" + id.substr(1, 10)).show();
+	$("#p" + id.substring(1, 11)).show();
 	$("#top").hide();
 	$("#step span").removeClass("already");
 

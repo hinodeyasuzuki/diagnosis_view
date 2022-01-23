@@ -596,6 +596,8 @@ showItemizeTable = function(target) {
 		cons = target[cid];
 		if (
 			cons.sumConsName != "consTotal" &&
+			cons.sumConsName != "" &&
+			cons.sumCons2Name != "" &&
 			cons.sumConsName != tabNowName &&
 			cons.sumCons2Name != tabNowName &&
 			cons.consName != "consTotal"
@@ -1041,8 +1043,8 @@ comma3 = function(num) {
 	if (num < 0) minus = 1;
 	n = "" + Math.abs(Math.round(num));
 	while ((l = n.length) > 3) {
-		m = "," + n.substr(l - 3, 3) + m;
-		n = n.substr(0, l - 3);
+		m = "," + n.substring(l - 3, l) + m;
+		n = n.substring(0, l - 3);
 	}
 	n = (minus == 1 ? "-" : "") + n + m;
 	return n;
@@ -1098,9 +1100,9 @@ languageset = function() {
 
 	//rot 13
 	for (var c in lang) {
-		if (typeof lang[c] == "string" && lang[c].substr(0, 2) == "q@") {
+		if (typeof lang[c] == "string" && lang[c].substring(0, 2) == "q@") {
 			lang[c] = decodeURIComponent(
-				escape(base64.decode(rot13(lang[c].substr(2))))
+				escape(base64.decode(rot13(lang[c].substring(2))))
 			);
 		}
 	}

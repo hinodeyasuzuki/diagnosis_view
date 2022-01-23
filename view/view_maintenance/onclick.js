@@ -41,17 +41,17 @@ function setOneMeasure(j, measure) {
 
 	html +=
 		"<table><tr><th>初期投資</th><td style='text-align=right;'>" +
-		parseInt(selList.substr(j + 5, 8)) +
+		parseInt(selList.substring(j + 5, j+13)) +
 		"円</td></tr>";
 	html +=
 		"<tr><th>光熱費削減額</th><td style='text-align=right;'>" +
-		(parseInt(selList.substr(j + 13, 1)) == 9 ? "-" : "") +
-		parseInt(selList.substr(j + 14, 7)) +
+		(parseInt(selList.substring(j + 13, j + 14)) == 9 ? "-" : "") +
+		parseInt(selList.substring(j + 14, j + 14+7)) +
 		"円</td></tr>";
 	html +=
 		"<tr><th>CO2削減</th><td style='text-align=right;'>" +
-		(parseInt(selList.substr(j + 21, 1)) == 9 ? "-" : "") +
-		parseInt(selList.substr(j + 22, 5)) +
+		(parseInt(selList.substring(j + 21, j + 22)) == 9 ? "-" : "") +
+		parseInt(selList.substring(j + 22, j + 22+5)) +
 		" kg</td></tr></table>";
 
 	html += "<p>" + D6.scenario.defMeasures[measure].advice + "</p>";
@@ -64,8 +64,8 @@ function showList() {
 	var html = "";
 	var measure = "";
 	for (var j = 0; j < selList.length; j += 27) {
-		var mesid = parseInt(selList.substr(j, 3));
-		var subid = parseInt(selList.substr(j + 3, 2));
+		var mesid = parseInt(selList.substring(j, j+3));
+		var subid = parseInt(selList.substring(j + 3, j + 3+2));
 		for (var mid in D6.scenario.defMeasures) {
 			if (D6.scenario.defMeasures[mid].mid == mesid) {
 				html +=

@@ -44,9 +44,10 @@ $forceModeDefs = [
 	//useCode, debugMode, useWorker
 	1 => [ 1, "true" ,"false" ],		//develop mode
 	2 => [ 2, "true" ,"false" ],		//packed check
-//	3 => [ 2, "true" ,"true"  ],	//worker check
+	3 => [ 2, "true" ,"true"  ],	//worker check
 	4 => [ 3, "false" ,"false" ],		//compressed release
-//	5 => [ 3, "false" ,"true" ]		// worker version
+	5 => [ 3, "false" ,"true" ],		// worker version
+	6 => [ 3, "true" ,"false" ]		//compressed debug for viewtest
 ];
 
 list( $useCode, $debugMode, $useWorker ) =  $forceModeDefs[$forceMode];
@@ -320,6 +321,9 @@ $viewModeList = array(
 	9=>"develop",	//develop
 	// 1-30,90-99 reserved for common
 	99=>"list",	//measure list
+
+
+	32=>"focus",	//2:focus diagnosis in one page
 );
 if ( @$viewModeList[$viewMode] ){
 	include "view/view_".$viewModeList[$viewMode]."/template.html";

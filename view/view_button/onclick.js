@@ -410,5 +410,5 @@ modeChange = function(id) {
 		break;
 	}
 	$(".page").hide();
-	$("#p" + id.substr(1, 10)).show();
+	$("#p" + id.substring(1, 11)).show();
 };

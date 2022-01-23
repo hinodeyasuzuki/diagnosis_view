@@ -111,7 +111,7 @@ var measurenext = function() {
 
 	param.mid = $("table#itemize tr:nth-child(" + (measuredisp + 1) + ")")
 		.prop("id")
-		.substr(5, 8);
+		.substring(5, 13);
 	startCalc("measureadd_comment", param);
 };
 
@@ -125,7 +125,7 @@ var modeChange = function(id) {
 	var param = {};
 
 	$(".page").hide();
-	$("#p" + id.substr(1, 10)).show();
+	$("#p" + id.substrig(1, 10)).show();
 	$("#top").hide();
 
 	switch (id) {
